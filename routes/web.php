@@ -11,6 +11,7 @@ use App\Http\Controllers\WebsiteController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/course-list', [CourseController::class, 'index'])->name('course-list');
+Route::get('/course-details', [CourseController::class, 'details'])->name('course-details');
 
 
 

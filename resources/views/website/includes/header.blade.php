@@ -80,51 +80,7 @@
 
 
                                 <li class="mega__menu position-static">
-                                    <a class="headerarea__has__dropdown" href="course.html">Courses<i class="icofont-rounded-down"></i> </a>
-                                    <div class="headerarea__submenu mega__menu__wrapper">
-
-                                        <div class="row">
-                                            <div class="col-3 mega__menu__single__wrap">
-                                                <h4 class="mega__menu__title"><a href="#">Get Started 1 </a></h4>
-                                                <ul class="mega__menu__item">
-                                                    <li><a href="course.html">Grid <span class="mega__menu__label">All Courses</span></a></li>
-                                                    <li><a href="course-dark.html">Course Grid (Dark)</a></li>
-                                                    <li><a href="course-grid.html">Course Grid</a></li>
-                                                    <li><a href="course-grid-dark.html">Course Grid (Dark)</a></li>
-                                                    <li><a href="course-list.html">Course List</a></li>
-                                                    <li><a href="course-list-dark.html">Course List (Dark)</a></li>
-                                                    
-                                                </ul>
-                                            </div>
-                                            <div class="col-3 mega__menu__single__wrap">
-                                                <h4 class="mega__menu__title"><a href="#">Get Started 2 </a></h4>
-                                                <ul class="mega__menu__item">
-                                                    <li><a href="course-details.html">Course Details</a></li>
-                                                    <li><a href="course-details-dark.html">Course Details (Dark)</a></li>
-                                                    <li><a href="course-details-2.html">Course Details 2</a></li>
-                                                    <li><a href="course-details-2-dark.html">Details 2 (Dark)</a></li>
-                                                    <li><a href="course-details-3.html">Course Details 3</a></li>
-                                                    <li><a href="course-details-3.html">Details 3 (Dark)</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-3 mega__menu__single__wrap">
-                                                <h4 class="mega__menu__title"><a href="#">Get Started 3</a></h4>
-                                                <ul class="mega__menu__item">
-                                                    <li><a href="dashboard/become-an-instructor.html">Become An Instructor</a>
-                                                    <li><a href="dashboard/create-course.html">Create Course <span class="mega__menu__label">Career</span></a></li>
-                                                    <li><a href="instructor.html">Instructor</a></li>
-                                                    <li><a href="instructor-dark.html">Instructor (Dark)</a></li>
-                                                    <li><a href="instructor-details.html">Instructor Details</a></li>
-                                                    <li><a href="lesson.html">Course Lesson<span class="mega__menu__label new">New</span></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-3 mega__menu__single__wrap">
-                                                <div class="mega__menu__img">
-                                                    <a href="#"><img loading="lazy"  src="{{ asset('/') }}website/img/mega/mega_menu_1.png" alt="Mega Menu"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <a class="headerarea__has__dropdown" href="{{ route('course-list') }}">Courses </a>
 
                                 </li>
 

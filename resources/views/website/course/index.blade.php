@@ -84,7 +84,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12" data-aos="fade-up">
                                         <div class="gridarea__wraper gridarea__wraper__2">
                                             <div class="gridarea__img">
-                                                <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_1.png" alt="grid"></a>
+                                                <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_1.png" alt="grid"></a>
                                                 <div class="gridarea__small__button">
                                                     <div class="grid__badge">Data & Tech</div>
                                                 </div>
@@ -105,7 +105,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="gridarea__heading">
-                                                    <h3><a href="course-details.html">Foundation course to under stand
+                                                    <h3><a href="{{ route('course-details') }}">Foundation course to under stand
                                                             about softwere</a></h3>
                                                 </div>
                                                 <div class="gridarea__price">
@@ -190,7 +190,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12" data-aos="fade-up">
                                         <div class="gridarea__wraper gridarea__wraper__2">
                                             <div class="gridarea__img">
-                                                <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_3.png" alt="grid"></a>
+                                                <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_3.png" alt="grid"></a>
                                                 <div class="gridarea__small__button">
                                                     <div class="grid__badge pink__color">Development</div>
                                                 </div>
@@ -211,7 +211,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="gridarea__heading">
-                                                    <h3><a href="course-details.html">Minws course to under stand
+                                                    <h3><a href="{{ route('course-details') }}">Minws course to under stand
                                                             about solution</a></h3>
                                                 </div>
                                                 <div class="gridarea__price">
@@ -244,7 +244,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12" data-aos="fade-up">
                                         <div class="gridarea__wraper gridarea__wraper__2">
                                             <div class="gridarea__img">
-                                                <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_4.png" alt="grid"></a>
+                                                <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_4.png" alt="grid"></a>
                                                 <div class="gridarea__small__button">
                                                     <div class="grid__badge green__color">Ui & UX Design</div>
                                                 </div>
@@ -265,7 +265,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="gridarea__heading">
-                                                    <h3><a href="course-details.html">Design course to under stand
+                                                    <h3><a href="{{ route('course-details') }}">Design course to under stand
                                                             about solution</a></h3>
                                                 </div>
                                                 <div class="gridarea__price">
@@ -298,7 +298,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12" data-aos="fade-up">
                                         <div class="gridarea__wraper gridarea__wraper__2">
                                             <div class="gridarea__img">
-                                                <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_5.png" alt="grid"></a>
+                                                <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_5.png" alt="grid"></a>
                                                 <div class="gridarea__small__button">
                                                     <div class="grid__badge orange__color">Data & Tech</div>
                                                 </div>
@@ -319,7 +319,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="gridarea__heading">
-                                                    <h3><a href="course-details.html">Data course to under stand
+                                                    <h3><a href="{{ route('course-details') }}">Data course to under stand
                                                             about solution</a></h3>
                                                 </div>
                                                 <div class="gridarea__price">
@@ -353,7 +353,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12" data-aos="fade-up">
                                         <div class="gridarea__wraper gridarea__wraper__2">
                                             <div class="gridarea__img">
-                                                <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_6.png" alt="grid"></a>
+                                                <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_6.png" alt="grid"></a>
                                                 <div class="gridarea__small__button">
                                                     <div class="grid__badge yellow__color">Big Data</div>
                                                 </div>
@@ -374,7 +374,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="gridarea__heading">
-                                                    <h3><a href="course-details.html">Big data to under stand
+                                                    <h3><a href="{{ route('course-details') }}">Big data to under stand
                                                             about solution pacage</a></h3>
                                                 </div>
                                                 <div class="gridarea__price">
@@ -407,7 +407,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12" data-aos="fade-up">
                                         <div class="gridarea__wraper gridarea__wraper__2">
                                             <div class="gridarea__img">
-                                                <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_1.png" alt="grid"></a>
+                                                <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_1.png" alt="grid"></a>
                                                 <div class="gridarea__small__button">
                                                     <div class="grid__badge">Data & Tech</div>
                                                 </div>
@@ -428,7 +428,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="gridarea__heading">
-                                                    <h3><a href="course-details.html">Foundation course to under stand
+                                                    <h3><a href="{{ route('course-details') }}">Foundation course to under stand
                                                             about softwere</a></h3>
                                                 </div>
                                                 <div class="gridarea__price">
@@ -514,7 +514,7 @@
                                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12" data-aos="fade-up">
                                         <div class="gridarea__wraper gridarea__wraper__2">
                                             <div class="gridarea__img">
-                                                <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_3.png" alt="grid"></a>
+                                                <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_3.png" alt="grid"></a>
                                                 <div class="gridarea__small__button">
                                                     <div class="grid__badge pink__color">Development</div>
                                                 </div>
@@ -535,7 +535,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="gridarea__heading">
-                                                    <h3><a href="course-details.html">Minws course to under stand
+                                                    <h3><a href="{{ route('course-details') }}">Minws course to under stand
                                                             about solution</a></h3>
                                                 </div>
                                                 <div class="gridarea__price">
@@ -574,7 +574,7 @@
 
                                 <div class="gridarea__wraper gridarea__wraper__2 gridarea__course__list" data-aos="fade-up">
                                     <div class="gridarea__img">
-                                        <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_1.png" alt="grid"></a>
+                                        <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_1.png" alt="grid"></a>
                                         <div class="gridarea__small__button">
                                             <div class="grid__badge">Data & Tech</div>
                                         </div>
@@ -595,7 +595,7 @@
                                             </ul>
                                         </div>
                                         <div class="gridarea__heading">
-                                            <h3><a href="course-details.html">Become a product Manager learn the
+                                            <h3><a href="{{ route('course-details') }}">Become a product Manager learn the
                                                             skills & job.
                                                         </a></h3>
                                         </div>
@@ -625,7 +625,7 @@
                                             </div>
 
                                             <div class="gridarea__details">
-                                                <a href="course-details.html">Know Details
+                                                <a href="{{ route('course-details') }}">Know Details
                                                             <i class="icofont-arrow-right"></i>
                                                         </a>
                                             </div>
@@ -657,7 +657,7 @@
                                             </ul>
                                         </div>
                                         <div class="gridarea__heading">
-                                            <h3><a href="course-details.html">Foundation course to under stand
+                                            <h3><a href="{{ route('course-details') }}">Foundation course to under stand
                                                         about softwere</a></h3>
                                         </div>
                                         <div class="gridarea__price">
@@ -686,7 +686,7 @@
                                             </div>
 
                                             <div class="gridarea__details">
-                                                <a href="course-details.html">Know Details
+                                                <a href="{{ route('course-details') }}">Know Details
                                                         <i class="icofont-arrow-right"></i>
                                                     </a>
                                             </div>
@@ -699,7 +699,7 @@
 
                                 <div class="gridarea__wraper gridarea__wraper__2 gridarea__course__list" data-aos="fade-up">
                                     <div class="gridarea__img">
-                                        <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_3.png" alt="grid"></a>
+                                        <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_3.png" alt="grid"></a>
                                         <div class="gridarea__small__button">
                                             <div class="grid__badge pink__color">Development</div>
                                         </div>
@@ -720,7 +720,7 @@
                                             </ul>
                                         </div>
                                         <div class="gridarea__heading">
-                                            <h3><a href="course-details.html">Strategy law and with for organization
+                                            <h3><a href="{{ route('course-details') }}">Strategy law and with for organization
                                                         Foundation 
                                                     </a></h3>
                                         </div>
@@ -750,7 +750,7 @@
                                             </div>
 
                                             <div class="gridarea__details">
-                                                <a href="course-details.html">Know Details
+                                                <a href="{{ route('course-details') }}">Know Details
                                                         <i class="icofont-arrow-right"></i>
                                                     </a>
                                             </div>
@@ -762,7 +762,7 @@
 
                                 <div class="gridarea__wraper gridarea__wraper__2 gridarea__course__list" data-aos="fade-up">
                                     <div class="gridarea__img">
-                                        <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_4.png" alt="grid"></a>
+                                        <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_4.png" alt="grid"></a>
                                         <div class="gridarea__small__button">
                                             <div class="grid__badge green__color">Ui & UX Design</div>
                                         </div>
@@ -783,7 +783,7 @@
                                             </ul>
                                         </div>
                                         <div class="gridarea__heading">
-                                            <h3><a href="course-details.html">The business Intelligence analyst with
+                                            <h3><a href="{{ route('course-details') }}">The business Intelligence analyst with
                                                         Course & 2024
                                                     </a></h3>
                                         </div>
@@ -813,7 +813,7 @@
                                             </div>
 
                                             <div class="gridarea__details">
-                                                <a href="course-details.html">Know Details
+                                                <a href="{{ route('course-details') }}">Know Details
                                                         <i class="icofont-arrow-right"></i>
                                                     </a>
                                             </div>
@@ -824,7 +824,7 @@
 
                                 <div class="gridarea__wraper gridarea__wraper__2 gridarea__course__list" data-aos="fade-up">
                                     <div class="gridarea__img">
-                                        <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_5.png" alt="grid"></a>
+                                        <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_5.png" alt="grid"></a>
                                         <div class="gridarea__small__button">
                                             <div class="grid__badge orange__color">Data & Tech</div>
                                         </div>
@@ -845,7 +845,7 @@
                                             </ul>
                                         </div>
                                         <div class="gridarea__heading">
-                                            <h3><a href="course-details.html">Become a product Manager learn the skills & job.
+                                            <h3><a href="{{ route('course-details') }}">Become a product Manager learn the skills & job.
                                                     </a></h3>
                                         </div>
                                         <div class="gridarea__price">
@@ -874,7 +874,7 @@
                                             </div>
 
                                             <div class="gridarea__details">
-                                                <a href="course-details.html">Know Details
+                                                <a href="{{ route('course-details') }}">Know Details
                                                         <i class="icofont-arrow-right"></i>
                                                     </a>
                                             </div>
