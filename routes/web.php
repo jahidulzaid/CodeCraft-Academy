@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebsiteController;
 
@@ -7,7 +9,8 @@ use App\Http\Controllers\WebsiteController;
 //     return view('welcome');
 // });
 
-Route::get('/', [WebsiteController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/course-list', [CourseController::class, 'index'])->name('course-list');
 
 
 
