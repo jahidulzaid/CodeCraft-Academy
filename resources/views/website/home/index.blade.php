@@ -308,13 +308,14 @@
                             <span>Education Solution</span>
                         </div>
                         <div class="herobannerarea__title__heading__2 herobannerarea__title__heading__3">
-                            <h2>Cloud-based LMS Trusted by 1000+</h2>
+                            <h2>Interactive Learning Platform: <br> CodeCraft Academy</h2>
+                            <h3>Learn. Practice. Master.</h3>
                         </div>
                     </div>
 
 
                     <div class="herobannerarea__text herobannerarea__text__2">
-                        <p>Lorem Ipsum is simply dummy text of the printing typesetting industry. Lorem Ipsum has been </p>
+                        <p>Start your programming journey with CodeCraft Academy — your one-stop platform for interactive, hands-on programming education. Whether you're a beginner or looking to sharpen your skills, we offer curated content, real-time practice, and step-by-step learning paths to help you grow.</p>
                     </div>
                     <div class="hreobannerarea__button__2">
                         <a class="default__button" href="{{ route('course-list') }}">View Courses</a>
@@ -339,8 +340,9 @@
     </div>
 </div>
 <!-- herobannerarea__section__end-->
+
 <!-- brand__section__start -->
-<div class="brandarea__2">
+{{-- <div class="brandarea__2">
     <div class="container">
         <div class="row">
             <div class="brandarea__wraper brandarea__wraper__2" data-aos="fade-up">
@@ -363,11 +365,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- brand__section__end -->
 
 <!-- aboutarea__2__section__start -->
-<div class="aboutarea__2 aboutarea__4 sp_bottom_30">
+{{-- <div class="aboutarea__2 aboutarea__4 sp_bottom_30">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" data-aos="fade-up">
@@ -417,7 +419,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- aboutarea__2__section__end -->
 
 
