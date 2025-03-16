@@ -1,8 +1,8 @@
 @extends('website.master')
 @section('body')
 
-<body>
-    <h2>Laravel + Judge0 API Compiler</h2>
+<div style="align-items: center;">
+    <h2>Laravel + Judge0 API Compiler with Input</h2>
 
     <form method="POST" action="{{ route('compiler.run') }}">
         @csrf
@@ -15,7 +15,12 @@
         </select>
 
         <br><br>
+        <label for="code">Your Code:</label><br>
         <textarea name="code" rows="15" cols="100">{{ $code ?? '' }}</textarea>
+
+        <br><br>
+        <label for="input">Custom Input:</label><br>
+        <textarea name="input" rows="5" cols="100">{{ $input ?? '' }}</textarea>
 
         <br><br>
         <button type="submit">Run Code</button>
@@ -25,7 +30,8 @@
         <h3>Output:</h3>
         <pre>{{ $output }}</pre>
     @endif
-</body>
+
+</div>
 
 
 @endsection
