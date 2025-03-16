@@ -15,12 +15,10 @@ Route::get('/course-list', [CourseController::class, 'index'])->name('course-lis
 Route::get('/course-details', [CourseController::class, 'details'])->name('course-details');
 
 
-//compiler
-Route::get('/compiler', [CompilerController::class, 'index'])->name('compiler.view');
-Route::post('/compiler/submit', [CompilerController::class, 'submit'])->name('compiler.submit');
 
 
-
+Route::get('/compiler', [CompilerController::class, 'index'])->name('compiler.index');
+Route::post('/compiler/run', [CompilerController::class, 'run'])->name('compiler.run');
 
 
 

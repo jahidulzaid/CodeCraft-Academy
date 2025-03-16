@@ -308,8 +308,8 @@
                             <span>Education Solution</span>
                         </div>
                         <div class="herobannerarea__title__heading__2 herobannerarea__title__heading__3">
-                            <h2>Interactive Learning Platform: <br> CodeCraft Academy</h2>
-                            <h3>Learn. Practice. Master.</h3>
+                            <h3>Interactive Learning Platform: <br> CodeCraft Academy</h3>
+                            <h5>Learn. Practice. Master.</h5>
                         </div>
                     </div>
 

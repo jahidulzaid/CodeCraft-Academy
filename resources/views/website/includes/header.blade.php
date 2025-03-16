@@ -145,7 +145,7 @@
                                 </li>
 
                                 <li class="mega__menu position-static">
-                                    <a class="headerarea__has__dropdown" href="{{ route('compiler.view') }}">Compiler</a>
+                                    <a class="headerarea__has__dropdown" href="{{ route('compiler.index') }}">Compiler</a>
 
                                 </li>
 

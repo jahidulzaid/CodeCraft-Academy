@@ -12,27 +12,23 @@ class CompilerController extends Controller
         return view('website.compiler.index');
     }
 
-    public function submit(Request $request)
+    public function run(Request $request)
     {
         $code = $request->input('code');
-        $languageId = $request->input('language'); // e.g., 71 = Python3
+        $languageId = $request->input('language'); // e.g., 71 for Python
 
-        // Send to Judge0 API
         $response = Http::withHeaders([
-            'x-rapidapi-host' => 'judge0-ce.p.rapidapi.com',
-            'x-rapidapi-key' => env('JUDGE0_API_KEY'),
+            'X-RapidAPI-Host' => 'judge0-ce.p.rapidapi.com',
+            'X-RapidAPI-Key' => env('JUDGE0_API_KEY'),
         ])->post('https://judge0-ce.p.rapidapi.com/submissions?base64_encoded=false&wait=true', [
             'source_code' => $code,
             'language_id' => (int) $languageId,
         ]);
-        
 
         $result = $response->json();
 
-        return view('website.compiler.index', [
-            'code' => $code,
-            'output' => $result['stdout'] ?? $result['stderr'] ?? 'Error running code',
-            'language' => $languageId
-        ]);
+        $output = $result['stdout'] ?? $result['stderr'] ?? $result['compile_output'] ?? 'No output';
+
+        return view('website.compiler.index', compact('code', 'languageId', 'output'));
     }
 }
