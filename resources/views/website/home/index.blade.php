@@ -5,288 +5,7 @@
 
 @section('body')
 
-<!-- Mobile Menu Start Here -->
-<div class="mobile-off-canvas-active">
-    <a class="mobile-aside-close"><i class="icofont  icofont-close-line"></i></a>
-    <div class="header-mobile-aside-wrap">
-        <div class="mobile-search">
-            <form class="search-form" action="#">
-                <input type="text" placeholder="Search entire store…">
-                <button class="button-search"><i class="icofont icofont-search-2"></i></button>
-            </form>
-        </div>
-        <div class="mobile-menu-wrap headerarea">
 
-            <div class="mobile-navigation">
-
-                <nav>
-                    <ul class="mobile-menu">
-                        <li class="menu-item-has-children"><a href="{{ route('home') }}">Home</a>
-                            <ul class="dropdown">
-                                <li class="menu-item-has-children"><a href="{{ route('home') }}">Homes Light</a>
-                                    <ul class="dropdown">
-                                        <li><a href="{{ route('home') }}">Home (Default)</a></li>
-                                        <li><a href="home-2.html">Elegant</a></li>
-                                        <li><a href="home-3.html">Classic</a></li>
-                                        <li><a href="home-4.html">Classic LMS</a></li>
-                                        <li><a href="home-5.html">Online Course </a></li>
-                                        <li><a href="home-6.html">Marketplace </a></li>
-                                        <li><a href="home-7.html">University</a></li>
-                                        <li><a href="home-8.html">eCommerce</a></li>
-                                        <li><a href="home-9.html">Kindergarten</a></li>
-                                        <li><a href="home-10.html">Machine Learning</a></li>
-                                        <li><a href="home-11.html">Single Course</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item-has-children">
-                                    <a href="{{ route('home') }}">Homes Dark</a>
-                                    <ul class="dropdown">
-                                        <li><a href="index-dark.html">Home Default (Dark)</a></li>
-                                        <li><a href="home-2-dark.html">Elegant (Dark)</a></li>
-                                        <li><a href="home-3-dark.html">Classic (Dark)</a></li>
-                                        <li><a href="home-4-dark.html">Classic LMS (Dark)</a></li>
-                                        <li><a href="home-5-dark.html">Online Course (Dark)</a></li>
-                                        <li><a href="home-6-dark.html">Marketplace (Dark)</a></li>
-                                        <li><a href="home-7-dark.html">University (Dark)</a></li>
-                                        <li><a href="home-8-dark.html">eCommerce (Dark)</a></li>
-                                        <li><a href="home-9-dark.html">Kindergarten (Dark)</a></li>
-                                        <li><a href="home-10-dark.html">Kindergarten (Dark)</a></li>
-                                        <li><a href="home-11-dark.html">Single Course (Dark)</a></li>
-                                    </ul>
-                                </li>
-
-                            </ul>
-                        </li>
-
-
-                        <li class="menu-item-has-children "><a href="#">Pages</a>
-
-                            <ul class="dropdown">
-                                <li class="menu-item-has-children">
-                                    <a href="#">Get Started 1</a>
-
-                                    <ul class="dropdown">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="about-dark.html">About (Dark)<span class="mega__menu__label new">New</span></a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-dark.html">Blog (Dark)</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                        <li><a href="blog-details-dark.html">Blog Details (Dark)</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item-has-children">
-                                    <a href="#">Get Started 2</a>
-                                    <ul class="dropdown">
-                                        <li><a href="error.html">Error 404</a></li>
-                                        <li><a href="error-dark.html">Error (Dark)</a></li>
-                                        <li><a href="event-details.html">Event Details</a></li>
-                                        <li><a href="zoom/zoom-meetings.html">Zoom<span class="mega__menu__label">Online Call</span></a></li>
-                                        <li><a href="zoom/zoom-meetings-dark.html">Zoom Meeting (Dark)</a></li>
-                                        <li><a href="zoom/zoom-meeting-details.html">Zoom Meeting Details</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item-has-children">
-                                    <a href="#">Get Started 3</a>
-                                    <ul class="dropdown">
-                                        <li><a href="zoom/zoom-meeting-details-dark.html">Meeting Details (Dark)</a>
-                                        </li>
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="login-dark.html">Login (Dark)</a></li>
-                                        <li><a href="maintenance.html">Maintenance</a></li>
-                                        <li><a href="maintenance-dark.html">Maintenance Dark</a></li>
-                                        <li><a href="#">Terms & Condition</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item-has-children">
-                                    <a href="#">Get Started 4</a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">Terms & Condition (Dark)</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="contact-dark.html">Contact (Dark)</a></li>
-                                        <li><a href="#">Success Stories</a></li>
-                                        <li><a href="#">Success Stories (Dark)</a></li>
-                                        <li><a href="#">Work Policy</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item-has-children">
-                                        <div class="mega__menu__img">
-                                        <a href="#"><img loading="lazy"  src="{{ asset('/') }}website/img/mega/mega_menu_2.png" alt="Mega Menu"></a>
-                                        </div>
-                                </li>
-                            </ul>
-                        </li>
-
-
-
-                        <li class="menu-item-has-children "><a href="course.html">Courses</a>
-
-                            <ul class="dropdown">
-                                <li class="menu-item-has-children">
-                                    <a href="#">Get Started 1</a>
-
-                                    <ul class="dropdown">
-                                        <li><a href="course.html">Grid <span class="mega__menu__label">All Courses</span></a></li>
-                                        <li><a href="course-dark.html">Course Grid (Dark)</a></li>
-                                        <li><a href="course-grid.html">Course Grid</a></li>
-                                        <li><a href="course-grid-dark.html">Course Grid (Dark)</a></li>
-                                        <li><a href="course-list.html">Course List</a></li>
-                                        <li><a href="course-list-dark.html">Course List (Dark)</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item-has-children">
-                                    <a href="#">Get Started 2</a>
-                                    <ul class="dropdown">
-                                        <li><a href="course-details.html">Course Details</a></li>
-                                        <li><a href="course-details-dark.html">Course Details (Dark)</a></li>
-                                        <li><a href="course-details-2.html">Course Details 2</a></li>
-                                        <li><a href="course-details-2-dark.html">Details 2 (Dark)</a></li>
-                                        <li><a href="course-details-3.html">Course Details 3</a></li>
-                                        <li><a href="course-details-3.html">Details 3 (Dark)</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item-has-children">
-                                    <a href="#">Get Started 3</a>
-                                    <ul class="dropdown">
-                                            <li><a href="dashboard/become-an-instructor.html">Become An Instructor</a>
-                                            <li><a href="dashboard/create-course.html">Create Course <span class="mega__menu__label">Career</span></a></li>
-                                            <li><a href="instructor.html">Instructor</a></li>
-                                            <li><a href="instructor-dark.html">Instructor (Dark)</a></li>
-                                            <li><a href="instructor-details.html">Instructor Details</a></li>
-                                            <li><a href="lesson.html">Course Lesson<span class="mega__menu__label new">New</span></a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item-has-children">
-                                        <div class="mega__menu__img">
-                                        <a href="#"><img loading="lazy"  src="{{ asset('/') }}website/img/mega/mega_menu_1.png" alt="Mega Menu"></a>
-                                        </div>
-                                </li>
-                            </ul>
-                        </li>
-
-                        
-                        <li class="menu-item-has-children "><a href="dashboard/admin-dashboard.html">Dashboard</a>
-
-                            <ul class="dropdown">
-                                <li class="menu-item-has-children">
-                                    <a href="#">Admin</a>
-
-                                    <ul class="dropdown">
-                                        <li><a href="dashboard/admin-dashboard.html">Admin Dashboard</a></li>
-                                        <li><a href="dashboard/admin-profile.html">Admin Profile</a></li>
-                                        <li><a href="dashboard/admin-message.html">Message</a></li>
-                                        <li><a href="dashboard/admin-course.html">Courses</a></li>
-                                        <li><a href="dashboard/admin-reviews.html">Review</a></li>
-                                        <li><a href="dashboard/admin-quiz-attempts.html">Admin Quiz</a></li>
-                                        
-                                        <li><a href="dashboard/admin-settings.html">Settings</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item-has-children">
-                                    <a href="#">Instructor</a>
-                                    <ul class="dropdown">
-                                        <li><a href="dashboard/instructor-dashboard.html">Inst. Dashboard</a></li>
-                                        <li><a href="dashboard/instructor-profile.html">Inst. Profile</a></li>
-                                        <li><a href="dashboard/instructor-message.html">Message</a></li>
-                                        <li><a href="dashboard/instructor-wishlist.html">Wishlist</a></li>
-                                        <li><a href="dashboard/instructor-reviews.html">Review</a></li>
-                                        <li><a href="dashboard/instructor-my-quiz-attempts.html">My Quiz</a></li>
-                                        <li><a href="dashboard/instructor-order-history.html">Order History</a></li>
-                                        <li><a href="dashboard/instructor-course.html">My Courses</a></li>
-                                        <li><a href="dashboard/instructor-announcments.html">Announcements</a></li>
-                                        <li><a href="dashboard/instructor-quiz-attempts.html">Quiz Attempts</a></li>
-                                        <li><a href="dashboard/instructor-assignments.html">Assignment</a></li>
-                                        <li><a href="dashboard/instructor-settings.html">Settings</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item-has-children">
-                                    <a href="#">Student</a>
-                                    <ul class="dropdown">
-                                        <li><a href="dashboard/student-dashboard.html">Dashboard</a></li>
-                                        <li><a href="dashboard/student-profile.html">Profile</a></li>
-<li><a href="dashboard/student-message.html">Message</a></li>
-                                        <li><a href="dashboard/student-enrolled-courses.html">Enrolled Courses</a></li>
-                                        <li><a href="dashboard/student-wishlist.html">Wishlist</a></li>
-                                        <li><a href="dashboard/student-reviews.html">Review</a></li>
-                                        <li><a href="dashboard/student-my-quiz-attempts.html">My Quiz</a></li>
-                                        <li><a href="dashboard/student-assignments.html">Assignment</a></li>
-                                        <li><a href="dashboard/student-settings.html">Settings</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="menu-item-has-children"><a href="ecommerce/shop.html">eCommerce</a>
-                            <ul class="dropdown">
-                                <li><a href="ecommerce/shop.html">Shop<span class="mega__menu__label">Online Store</span></a></li>
-                                <li><a href="ecommerce/product-details.html">Product Details</a></li>
-                                <li><a href="ecommerce/cart.html">Cart</a></li>
-                                <li><a href="ecommerce/checkout.html">Checkout</a></li>
-                                <li><a href="ecommerce/wishlist.html">Wishlist</a></li>
-
-                            </ul>
-                        </li>
-
-                    </ul>
-                </nav>
-
-            </div>
-
-        </div>
-        <div class="mobile-curr-lang-wrap">
-            <div class="single-mobile-curr-lang">
-                <a class="mobile-language-active" href="#">Language <i class="icofont-thin-down"></i></a>
-                <div class="lang-curr-dropdown lang-dropdown-active">
-                    <ul>
-                        <li><a href="#">English (US)</a></li>
-                        <li><a href="#">English (UK)</a></li>
-                        <li><a href="#">Spanish</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- <div class="single-mobile-curr-lang">
-                        <a class="mobile-currency-active" href="#">Currency <i class="icofont-thin-down"></i></a>
-                        <div class="lang-curr-dropdown curr-dropdown-active">
-                            <ul>
-                                <li><a href="#">USD</a></li>
-                                <li><a href="#">EUR</a></li>
-                                <li><a href="#">Real</a></li>
-                                <li><a href="#">BDT</a></li>
-                            </ul>
-                        </div>
-                    </div> -->
-
-            <div class="single-mobile-curr-lang">
-                <a class="mobile-account-active" href="#">My Account <i class="icofont-thin-down"></i></a>
-                <div class="lang-curr-dropdown account-dropdown-active">
-                    <ul>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="login.html">/ Create Account</a></li>
-                        <li><a href="login.html">My Account</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="mobile-social-wrap">
-            <a class="facebook" href="#"><i class="icofont icofont-facebook"></i></a>
-            <a class="twitter" href="#"><i class="icofont icofont-twitter"></i></a>
-            <a class="pinterest" href="#"><i class="icofont icofont-pinterest"></i></a>
-            <a class="instagram" href="#"><i class="icofont icofont-instagram"></i></a>
-            <a class="google" href="#"><i class="icofont icofont-youtube-play"></i></a>
-        </div>
-    </div>
-</div>
-<!-- Mobile Menu end Here -->
 
 <!-- theme fixed shadow -->
 <div>
@@ -341,86 +60,7 @@
 </div>
 <!-- herobannerarea__section__end-->
 
-<!-- brand__section__start -->
-{{-- <div class="brandarea__2">
-    <div class="container">
-        <div class="row">
-            <div class="brandarea__wraper brandarea__wraper__2" data-aos="fade-up">
-                <div class="brandarea__img">
-                    <a href="#"><img loading="lazy"  src="{{ asset('/') }}website/img/brand/brand_1.png" alt="brand"></a>
-                </div>
-                <div class="brandarea__img">
-                    <a href="#"><img loading="lazy"  src="{{ asset('/') }}website/img/brand/brand_2.png" alt="brand"></a>
-                </div>
-                <div class="brandarea__img">
-                    <a href="#"><img loading="lazy"  src="{{ asset('/') }}website/img/brand/brand_3.png" alt="brand"></a>
-                </div>
-                <div class="brandarea__img">
-                    <a href="#"><img loading="lazy"  src="{{ asset('/') }}website/img/brand/brand_4.png" alt="brand"></a>
-                </div>
-                <div class="brandarea__img">
-                    <a href="#"><img loading="lazy"  src="{{ asset('/') }}website/img/brand/brand_5.png" alt="brand"></a>
-                </div>
 
-            </div>
-        </div>
-    </div>
-</div> --}}
-<!-- brand__section__end -->
-
-<!-- aboutarea__2__section__start -->
-{{-- <div class="aboutarea__2 aboutarea__4 sp_bottom_30">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" data-aos="fade-up">
-                <div class="about__right__wraper__2 about__right__wraper__4">
-                    <div class="educationarea__img" data-tilt>
-                        <img loading="lazy"  class="aboutimg__4__img__1" src="{{ asset('/') }}website/img/about/about_13.png" alt="about">
-                        <img loading="lazy"  class="aboutimg__4__img__2" src="{{ asset('/') }}website/img/about/about_12.png" alt="about">
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" data-aos="fade-up">
-
-                <div class="aboutarea__content__wraper">
-
-                    <div class="section__title__2">
-                        <div class="section__small__title">
-                            <span>Education Solution</span>
-                        </div>
-                        <div class="section__title__heading__2 section__title__heading__3 heading__fontsize__2">
-                            <h2>Welcome to the online Learning Center</h2>
-                        </div>
-                    </div>
-
-
-                    <div class="aboutarea__para aboutarea__para__2">
-                        <p>25+Contrary to popular belief, Lorem Ipsum is not simply random text roots in a piece of classical Latin literature from 45 BC</p>
-                    </div>
-                    <div class="aboutarea__list__2">
-                        <ul>
-                            <li>
-                                <i class="icofont-check"></i> Explore a variety of fresh educational teach
-                            </li>
-
-                            <li>
-                                <i class="icofont-check"></i> Explore a variety of fresh educational teach
-                            </li>
-
-                            <li>
-                                <i class="icofont-check"></i> Explore a variety of fresh educational teach
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div> --}}
-<!-- aboutarea__2__section__end -->
 
 
 
@@ -431,18 +71,18 @@
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6" data-aos="fade-up">
                 <div class="populerarea__heading heading__underline">
                     <div class="default__small__button">Course List</div>
-                    <h2>Populer <span>Subjects</span></h2>
+                    <h2>Populer Subjects</h2>
                 </div>
             </div>
             <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6" data-aos="fade-up">
                 <div class="populerarea__content">
-                    <p>Forging relationships between multi to national governments and global NGOs begins.</p>
+                    <p>Explore our structured and beginner-friendly programming courses designed for practical learning.</p>
                 </div>
             </div>
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6" data-aos="fade-up">
                 <div class="populerarea__button">
-                    <a class="default__button" href="#">All Catagories
-                        <i class="icofont-long-arrow-right"></i>
+                    {{-- <a class="default__button" href="#">All Catagories
+                        <i class="icofont-long-arrow-right"></i> --}}
                     </a>
                 </div>
             </div>
@@ -619,40 +259,6 @@
                 <div class="single__service">
                     <div class="service__img">
                         <svg class="service__icon" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_98_105)">
-                            <path d="M38.0462 15.8125C37.7036 15.8174 37.3751 15.9558 37.125 16.2006V12.9375C37.125 11.7938 36.6904 10.6969 35.9168 9.8881C35.1432 9.07935 34.094 8.625 33 8.625H31.625V7.1875C31.625 6.04375 31.1904 4.94685 30.4168 4.1381C29.6432 3.32935 28.594 2.875 27.5 2.875H16.5C15.406 2.875 14.3568 3.32935 13.5832 4.1381C12.8096 4.94685 12.375 6.04375 12.375 7.1875V8.625H11C9.90598 8.625 8.85677 9.07935 8.08318 9.8881C7.3096 10.6969 6.875 11.7938 6.875 12.9375V33.0625C6.875 34.2062 7.3096 35.3031 8.08318 36.1119C8.85677 36.9207 9.90598 37.375 11 37.375H12.375V38.8125C12.375 39.9562 12.8096 41.0531 13.5832 41.8619C14.3568 42.6707 15.406 43.125 16.5 43.125H27.5C28.594 43.125 29.6432 42.6707 30.4168 41.8619C31.1904 41.0531 31.625 39.9562 31.625 38.8125V37.375H33C34.094 37.375 35.1432 36.9207 35.9168 36.1119C36.6904 35.3031 37.125 34.2062 37.125 33.0625V21.1744C37.3751 21.4192 37.7036 21.5576 38.0462 21.5625C38.4109 21.5625 38.7607 21.411 39.0185 21.1415C39.2764 20.8719 39.4212 20.5062 39.4212 20.125V17.25C39.4212 16.8688 39.2764 16.5031 39.0185 16.2335C38.7607 15.964 38.4109 15.8125 38.0462 15.8125ZM15.125 7.1875C15.125 6.80625 15.2699 6.44062 15.5277 6.17103C15.7856 5.90145 16.1353 5.75 16.5 5.75H27.5C27.8647 5.75 28.2144 5.90145 28.4723 6.17103C28.7301 6.44062 28.875 6.80625 28.875 7.1875V8.625H15.125V7.1875ZM28.875 38.8125C28.875 39.1937 28.7301 39.5594 28.4723 39.829C28.2144 40.0985 27.8647 40.25 27.5 40.25H16.5C16.1353 40.25 15.7856 40.0985 15.5277 39.829C15.2699 39.5594 15.125 39.1937 15.125 38.8125V37.375H28.875V38.8125ZM34.375 33.0625C34.375 33.4437 34.2301 33.8094 33.9723 34.079C33.7144 34.3486 33.3647 34.5 33 34.5H11C10.6353 34.5 10.2856 34.3486 10.0277 34.079C9.76987 33.8094 9.625 33.4437 9.625 33.0625V12.9375C9.625 12.5563 9.76987 12.1906 10.0277 11.921C10.2856 11.6515 10.6353 11.5 11 11.5H33C33.3647 11.5 33.7144 11.6515 33.9723 11.921C34.2301 12.1906 34.375 12.5563 34.375 12.9375V33.0625Z" fill="#5F2DED"/>
-                            <path d="M29.5624 23H27.4999L26.5924 17.02C26.5464 16.7228 26.4124 16.4483 26.2092 16.235C26.0061 16.0218 25.744 15.8806 25.4599 15.8314C25.1759 15.7821 24.8843 15.8274 24.6261 15.9607C24.368 16.094 24.1564 16.3086 24.0212 16.5743L21.2712 22.1518L20.0887 18.2562C20.0066 17.9854 19.8495 17.7462 19.6375 17.5686C19.4254 17.3911 19.1678 17.2832 18.8971 17.2586C18.6264 17.234 18.3548 17.2937 18.1166 17.4304C17.8784 17.567 17.6843 17.7743 17.5587 18.0262L15.7849 21.5625H14.4099C14.0452 21.5625 13.6955 21.7139 13.4376 21.9835C13.1798 22.2531 13.0349 22.6187 13.0349 23C13.0349 23.3812 13.1798 23.7468 13.4376 24.0164C13.6955 24.286 14.0452 24.4375 14.4099 24.4375H16.5824C16.8312 24.4368 17.0751 24.3655 17.2881 24.2314C17.5012 24.0972 17.6755 23.9051 17.7924 23.6756L18.4249 22.4106L19.6074 26.3062C19.6898 26.5745 19.8459 26.8116 20.0561 26.9879C20.2663 27.1643 20.5215 27.2721 20.7899 27.2981H20.9137C21.1624 27.2974 21.4063 27.2262 21.6194 27.092C21.8325 26.9578 22.0068 26.7657 22.1237 26.5362L24.5299 21.7493L24.9699 24.6243C25.0226 24.9645 25.1905 25.2735 25.4428 25.4952C25.6952 25.7168 26.0153 25.8363 26.3449 25.8318H29.5624C29.9271 25.8318 30.2768 25.6804 30.5347 25.4108C30.7926 25.1412 30.9374 24.7756 30.9374 24.3943C30.9374 24.0131 30.7926 23.6475 30.5347 23.3779C30.2768 23.1083 29.9271 22.9568 29.5624 22.9568V23Z" fill="#FFB31F"/>
-                            </g>
-                            <defs>
-                            <clipPath >
-                            <rect width="44" height="46" fill="white"/>
-                            </clipPath>
-                            </defs>
-                            </svg>
-
-
-
-                        <div class="service__bg__img">
-                            <svg class="service__icon__bg" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M63.3775 44.4535C54.8582 58.717 39.1005 53.2202 23.1736 47.5697C7.2467 41.9192 -5.18037 32.7111 3.33895 18.4477C11.8583 4.18418 31.6595 -2.79441 47.5803 2.85105C63.5011 8.49652 71.8609 30.2313 63.3488 44.4865L63.3775 44.4535Z" fill="#5F2DED" fill-opacity="0.05"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="service__content">
-                        <h3><a href="course-details.html">Health & Fitness</a></h3>
-                        <p>health is wealth</p>
-                    </div>
-                    <div class="service__small__img">
-                        <svg class="icon__hover__img" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.5961 10.265L19 1.33069L10.0022 3.73285L1 6.1306L7.59393 12.6627L14.1879 19.1992L16.5961 10.265Z" stroke="#FFB31F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6" data-aos="fade-up">
-                <div class="single__service">
-                    <div class="service__img">
-                        <svg class="service__icon" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.351 30.927C9.54602 30.3482 4.98802 25.6347 4.98802 19.9289C4.98802 13.8097 10.191 8.84815 16.512 8.84815C18.404 8.84815 20.21 9.30295 21.801 10.0885L23.865 8.10391C21.715 6.86353 19.221 6.16064 16.512 6.16064C8.60003 6.16064 2.15002 12.3626 2.15002 19.9703C2.15002 27.3712 8.21303 33.4491 15.867 33.7385C15.523 33.077 15.308 32.3741 15.308 31.5885V30.927H15.351Z" fill="#5F2DED"/>
                             <path d="M29.971 21.376L30.874 20.7971C30.917 20.5077 30.917 20.2183 30.917 19.8875C30.917 17.324 30.186 14.8846 28.896 12.8586L26.832 14.8433C27.649 16.3731 28.122 18.0683 28.122 19.8875C28.122 20.7558 27.993 21.5827 27.821 22.4096C28.552 22.2029 29.283 21.8721 29.971 21.376Z" fill="#5F2DED"/>
                             <path d="M16.5551 14.0164C16.8991 14.0164 17.2431 14.0578 17.5871 14.0991L19.8661 11.9078C18.8341 11.4943 17.7161 11.2876 16.5551 11.2876C11.6101 11.2876 7.61108 15.1328 7.61108 19.8876C7.61108 24.2289 11.0081 27.8674 15.3511 28.4049V27.4126C15.3511 26.7924 15.4801 26.2549 15.6951 25.7174C12.7281 25.3039 10.4061 22.8645 10.4061 19.8876C10.4061 16.6626 13.1581 14.0164 16.5551 14.0164Z" fill="#5F2DED"/>
@@ -681,37 +287,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6" data-aos="fade-up">
-                <div class="single__service">
-                    <div class="service__img">
 
-                        <svg class="service__icon" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.30281 28.9536H8.45394C9.05625 28.9536 9.48648 29.5426 9.48648 30.2495V36.8465C9.48648 37.6711 9.05625 38.2602 8.45394 38.2602H6.30281C5.78654 38.2602 5.27026 37.6711 5.27026 36.8465V30.2495C5.27026 29.5426 5.78654 28.9536 6.30281 28.9536Z" fill="#5F2DED"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7027 23.7833H15.8987C16.4257 23.7833 16.8649 24.4239 16.8649 25.3207V36.7228C16.8649 37.6196 16.4257 38.2602 15.8987 38.2602H13.7027C13.0879 38.2602 12.6487 37.6196 12.6487 36.7228V25.3207C12.6487 24.4239 13.0879 23.7833 13.7027 23.7833Z" fill="#5F2DED"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.0596 19.6471H23.2108C23.727 19.6471 24.2433 20.412 24.2433 21.1769V36.7303C24.2433 37.6227 23.727 38.2602 23.2108 38.2602H21.0596C20.4573 38.2602 20.0271 37.6227 20.0271 36.7303V21.1769C20.0271 20.412 20.4573 19.6471 21.0596 19.6471Z" fill="#5F2DED"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M28.4381 15.5109H30.5892C31.1055 15.5109 31.6217 16.1499 31.6217 17.0445V36.7265C31.6217 37.6212 31.1055 38.2602 30.5892 38.2602H28.4381C27.8357 38.2602 27.4055 37.6212 27.4055 36.7265V17.0445C27.4055 16.1499 27.8357 15.5109 28.4381 15.5109Z" fill="#5F2DED"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.9989 7.6293L23.05 18.137L20.3744 15.4678C15.622 19.6266 9.96272 22.5976 3.63238 24.2568C1.36694 24.9297 0.353173 21.6176 2.74495 21.0505C8.47735 19.533 13.5443 16.8156 17.8363 13.1279L15.5453 10.8879L26.9989 7.6293Z" fill="#FFB31F"/>
-                         </svg>
-
-
-
-                        <div class="service__bg__img">
-                            <svg class="service__icon__bg" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M63.3775 44.4535C54.8582 58.717 39.1005 53.2202 23.1736 47.5697C7.2467 41.9192 -5.18037 32.7111 3.33895 18.4477C11.8583 4.18418 31.6595 -2.79441 47.5803 2.85105C63.5011 8.49652 71.8609 30.2313 63.3488 44.4865L63.3775 44.4535Z" fill="#5F2DED" fill-opacity="0.05"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="service__content">
-                        <h3><a href="course-details.html">Business Studies</a></h3>
-                        <p>Business is succes</p>
-                    </div>
-                    <div class="service__small__img">
-                        <svg class="icon__hover__img" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.5961 10.265L19 1.33069L10.0022 3.73285L1 6.1306L7.59393 12.6627L14.1879 19.1992L16.5961 10.265Z" stroke="#FFB31F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
 
         </div>
     </div>
@@ -750,61 +326,7 @@
 
 
         <div class="row grid" data-aos="fade-up">
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 grid-item filter1 filter3">
-                <div class="gridarea__wraper">
-                    <div class="gridarea__img">
-                        <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_1.png" alt="grid"></a>
-                        <div class="gridarea__small__button">
-                            <div class="grid__badge">Data & Tech</div>
-                        </div>
-                        <div class="gridarea__small__icon">
-                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                        </div>
 
-                    </div>
-                    <div class="gridarea__content">
-                        <div class="gridarea__list">
-                            <ul>
-                                <li>
-                                    <i class="icofont-book-alt"></i> 23 Lesson
-                                </li>
-                                <li>
-                                    <i class="icofont-clock-time"></i> 1 hr 30 min
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="gridarea__heading">
-                            <h3><a href="course-details.html">Foundation course to under stand
-                                about softwere</a></h3>
-                        </div>
-                        <div class="gridarea__price">
-                            $32.00 <del>/ $67.00</del>
-                            <span> <del class="del__2">Free</del></span>
-
-                        </div>
-                        <div class="gridarea__bottom">
-
-                            <a href="instructor-details.html">
-                                <div class="gridarea__small__img">
-                                    <img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_small_1.jpg" alt="grid">
-                                    <div class="gridarea__small__content">
-                                        <h6>Micle Jhon</h6>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <div class="gridarea__star">
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <span>(44)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 grid-item filter2 filter3">
                 <div class="gridarea__wraper">
@@ -916,173 +438,7 @@
                 </div>
             </div>
 
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 grid-item filter4">
-                <div class="gridarea__wraper">
-                    <div class="gridarea__img">
-                        <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_4.png" alt="grid"></a>
-                        <div class="gridarea__small__button">
-                            <div class="grid__badge green__color">Ui & UX Design</div>
-                        </div>
-                        <div class="gridarea__small__icon">
-                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                        </div>
 
-                    </div>
-                    <div class="gridarea__content">
-                        <div class="gridarea__list">
-                            <ul>
-                                <li>
-                                    <i class="icofont-book-alt"></i> 36 Lesson
-                                </li>
-                                <li>
-                                    <i class="icofont-clock-time"></i> 3 hr 40 min
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="gridarea__heading">
-                            <h3><a href="course-details.html">Design course to under stand
-                                about solution</a></h3>
-                        </div>
-                        <div class="gridarea__price">
-                            $40.00 <del>/ $67.00</del>
-                            <span> <del class="del__2">Free</del></span>
-
-                        </div>
-                        <div class="gridarea__bottom">
-
-                            <a href="instructor-details.html">
-                                <div class="gridarea__small__img">
-                                    <img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_small_4.jpg" alt="grid">
-                                    <div class="gridarea__small__content">
-                                        <h6>Micle Robin</h6>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <div class="gridarea__star">
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <span>(44)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 grid-item filter1 filter3">
-                <div class="gridarea__wraper">
-                    <div class="gridarea__img">
-                        <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_5.png" alt="grid"></a>
-                        <div class="gridarea__small__button">
-                            <div class="grid__badge orange__color">Data & Tech</div>
-                        </div>
-                        <div class="gridarea__small__icon">
-                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                        </div>
-
-                    </div>
-                    <div class="gridarea__content">
-                        <div class="gridarea__list">
-                            <ul>
-                                <li>
-                                    <i class="icofont-book-alt"></i> 36 Lesson
-                                </li>
-                                <li>
-                                    <i class="icofont-clock-time"></i> 3 hr 40 min
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="gridarea__heading">
-                            <h3><a href="course-details.html">Data course to under stand
-                                about solution</a></h3>
-                        </div>
-                        <div class="gridarea__price">
-                            $40.00 <del>/ $67.00</del>
-                            <span> <del class="del__2">Free</del></span>
-
-                        </div>
-                        <div class="gridarea__bottom">
-
-                            <a href="instructor-details.html">
-                                <div class="gridarea__small__img">
-                                    <img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_small_5.jpg" alt="grid">
-                                    <div class="gridarea__small__content">
-                                        <h6>Micle Robin</h6>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <div class="gridarea__star">
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <span>(44)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 grid-item filter5 filter2">
-                <div class="gridarea__wraper">
-                    <div class="gridarea__img">
-                        <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_6.png" alt="grid"></a>
-                        <div class="gridarea__small__button">
-                            <div class="grid__badge yellow__color">Big Data</div>
-                        </div>
-                        <div class="gridarea__small__icon">
-                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                        </div>
-
-                    </div>
-                    <div class="gridarea__content">
-                        <div class="gridarea__list">
-                            <ul>
-                                <li>
-                                    <i class="icofont-book-alt"></i> 30 Lesson
-                                </li>
-                                <li>
-                                    <i class="icofont-clock-time"></i> 3 hr 40 min
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="gridarea__heading">
-                            <h3><a href="course-details.html">Big data to under stand
-                                about solution pacage</a></h3>
-                        </div>
-                        <div class="gridarea__price">
-                            $40.00 <del>/ $67.00</del>
-                            <span> <del class="del__2">Free</del></span>
-
-                        </div>
-                        <div class="gridarea__bottom">
-
-                            <a href="instructor-details.html">
-                                <div class="gridarea__small__img">
-                                    <img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_small_5.jpg" alt="grid">
-                                    <div class="gridarea__small__content">
-                                        <h6>Micle Robin</h6>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <div class="gridarea__star">
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <i class="icofont-star"></i>
-                                <span>(44)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </div>
     </div>
@@ -1266,7 +622,7 @@
 <!-- team__section__end-->
 
 <!-- testimonial__section__start -->
-<div class="testimonialarea__3">
+{{-- <div class="testimonialarea__3">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -1335,7 +691,7 @@
         </div>
     </div>
 
-</div>
+</div> --}}
 <!-- testimonial__section__start -->
 
 <!-- blog__section__start -->
