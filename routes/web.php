@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebsiteController;
@@ -32,11 +33,15 @@ Route::get('/shop', [ShopController::class, 'index'])->name('shop');
 Route::get('/signin', [LoginController::class, 'index'])->name('signin');
 
 
+//registration
+Route::post('/register', [RegisterController::class, 'register'])->name('register');
+
+
 //google auth
-// Redirect to Google
-Route::get('/auth/google', [SocialController::class, 'redirectToGoogle'])->name('google.login');
-// Handle Google callback
-Route::get('/auth/google/callback', [SocialController::class, 'handleGoogleCallback']);
+use App\Http\Controllers\Auth\SocialController;
+
+Route::get('/auth/google', [SocialController::class, 'redirectToGoogle'])->middleware('guest')->name('google.login');
+Route::get('/auth/google/callback', [SocialController::class, 'handleGoogleCallback'])->middleware('guest');
 
 
 

@@ -103,8 +103,17 @@
                                         <p>or Log-in with</p>
 
                                         <ul class="login__social__btn">
-                                            <li><a class="default__button login__button__1" href="#"><i class="icofont-facebook"></i> Gacebook</a></li>
-                                            <li><a class="default__button" href="#"><i class="icofont-google-plus"></i> Google</a></li>
+                                            <li><a class="default__button login__button__1" href="#"><i class="icofont-facebook"></i> FB</a></li>
+                                            <li>
+                                                <a href="{{ route('google.login') }}"
+                                                class="default__button login__button__1">
+                                                    
+                                                    <i class="icofont-google"></i>
+                                                    Google
+                                                </a>
+
+
+                                            </li>
                                         </ul>
                                     </div>
 
@@ -123,66 +132,60 @@
 
 
 
-                                    <form action="#">
+                                    <form action="{{ route('register') }}" method="POST">
+                                        @csrf
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <div class="login__form">
                                                     <label class="form__label">First Name</label>
-                                                    <input class="common__login__input" type="text" placeholder="First Name">
+                                                    <input class="common__login__input" name="first_name" type="text" placeholder="First Name">
 
                                                 </div>
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="login__form">
                                                     <label class="form__label">Last Name</label>
-                                                    <input class="common__login__input" type="password" placeholder="Last Name">
+                                                    <input class="common__login__input" name="last_name" type="text" placeholder="Last Name">
 
                                                 </div>
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="login__form">
                                                     <label class="form__label">Username</label>
-                                                    <input class="common__login__input" type="password" placeholder="Username">
+                                                    <input class="common__login__input" name="username" type="text" placeholder="Username">
 
                                                 </div>
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="login__form">
                                                     <label class="form__label">Email</label>
-                                                    <input class="common__login__input" type="password" placeholder="Your Email">
+                                                    <input class="common__login__input" name="email" type="email" placeholder="Your Email">
 
                                                 </div>
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="login__form">
                                                     <label class="form__label">Password</label>
-                                                    <input class="common__login__input" type="password" placeholder="Password">
+                                                    <input class="common__login__input" name="password" type="password" placeholder="Password">
 
                                                 </div>
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="login__form">
                                                     <label class="form__label">Re-Enter Password</label>
-                                                    <input class="common__login__input" type="password" placeholder="Re-Enter Password">
+                                                    <input class="common__login__input" name="password_confirmation" type="password" placeholder="Re-Enter Password">
 
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="login__form d-flex justify-content-between flex-wrap gap-2">
-                                            <div class="form__check">
-                                                <input id="accept_pp" type="checkbox"> <label for="accept_pp">Accept the Terms and Privacy Policy</label>
-                                            </div>
 
-                                        </div>
                                         <div class="login__button">
-                                            <a class="default__button" href="#">Log In</a>
+                                            <a class="default__button" href="">
+                                                <button type="submit" class="default__button">Sign Up</button>
+                                            </a>
                                         </div>
                                     </form>
-
-
-
-
                                 </div>
                             </div>
 

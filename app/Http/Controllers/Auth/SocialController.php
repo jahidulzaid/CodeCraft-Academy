@@ -1,9 +1,13 @@
 <?php
 
+namespace App\Http\Controllers\Auth;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use Laravel\Socialite\Facades\Socialite;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Str; 
+use App\Models\User;
 
 class SocialController extends Controller
 {
@@ -16,13 +20,19 @@ class SocialController extends Controller
     {
         $googleUser = Socialite::driver('google')->stateless()->user();
 
-        $user = User::updateOrCreate([
-            'email' => $googleUser->getEmail(),
-        ], [
-            'name' => $googleUser->getName(),
-            'google_id' => $googleUser->getId(),
-            'avatar' => $googleUser->getAvatar(),
-        ]);
+       $user = User::updateOrCreate(
+    [
+        'email' => $googleUser->getEmail(),
+    ],
+    [
+        'name' => $googleUser->getName(),
+        'google_id' => $googleUser->getId(),
+        'avatar' => $googleUser->getAvatar(),
+        'access_token' => $googleUser->token,
+        'refresh_token' => $token['refresh_token'] ?? null,
+        'password' => Hash::make(Str::random(24)), // <-- this line
+    ]
+);
 
         Auth::login($user);
 
