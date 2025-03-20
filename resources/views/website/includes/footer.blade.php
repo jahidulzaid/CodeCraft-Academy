@@ -5,8 +5,8 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" data-aos="fade-up">
                     <div class="footerarea__text">
-                        <h3>Still You Need Our <span>Support</span> ?</h3>
-                        <p>Don’t wait make a smart & logical quote here. Its pretty easy.</p>
+                        <h3>Get in touch & Get <span>Support</span> ?</h3>
+                        <p>Don’t wait — take the smart step and reach out today. It’s quick and easy!</p>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" data-aos="fade-up">
@@ -32,7 +32,7 @@
                             <h3>About us</h3>
                         </div>
                         <div class="footerarea__content">
-                            <p>orporate clients and leisure travelers has been relying on Groundlink for dependable safe, and professional chauffeured car end service in major cities across World.</p>
+                            <p>CodeCraft is an interactive learning platform designed to help students and professionals master programming and tech skills through hands-on learning. From beginner to advanced, our courses are built to boost your confidence and career in the digital world.</p>
                         </div>
                         <div class="foter__bottom__text">
                             <div class="footer__bottom__icon">
@@ -156,22 +156,22 @@
             <div class="row">
                 <div class="col-xl-3 col-lg-3">
                     <div class="copyright__logo">
-                        <a href="https://foxpixel.vercel.app/"><img loading="lazy"  src="{{ asset('/') }}website/img/logo/logo_2.png" alt="logo"></a>
+                        <a href="https://photos.app.goo.gl/MYsj3KRJMnwUoysV9"><img loading="lazy"  src="{{ asset('/') }}website/img/logo/logo_2.png" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6">
                     <div class="footerarea__copyright__content footerarea__copyright__content__2">
-                        <p>Copyright © <span>2024</span> by edurock. All Rights Reserved.</p>
+                        <p>Copyright © 2025 by <span><a href="https://github.com/jahidulzaid/Interactive-Learning-Platform">Jahidul Islam</a></span>. All Rights Reserved.</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3">
                     <div class="footerarea__icon footerarea__icon__2">
                         <ul>
-                            <li><a href="http://facebook.com/"><i class="icofont-facebook"></i></a></li>
-                            <li><a href="http://twitter.com/"><i class="icofont-twitter"></i></a></li>
-                            <li><a href="http://vimeo.com/"><i class="icofont-vimeo"></i></a></li>
-                            <li><a href="http://linkedin.com/"><i class="icofont-linkedin"></i></a></li>
-                            <li><a href="http://skype.com/"><i class="icofont-skype"></i></a></li>
+                            <li><a href="http://facebook.com/jahidulZaid"><i class="icofont-facebook"></i></a></li>
+                            <li><a href="http://x.com/jahidulZaid"><i class="icofont-twitter"></i></a></li>
+                            <li><a href="https://github.com/jahidulzaid"><i class="icofont-github"></i></a></li>
+                            <li><a href="https://linkedin.com/in/jahidulzaid/"><i class="icofont-linkedin"></i></a></li>
+                            
                         </ul>
                     </div>
                 </div>

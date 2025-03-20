@@ -31,15 +31,15 @@
                             <h3>About us</h3>
                         </div>
                         <div class="footerarea__content">
-                            <p>orporate clients and leisure travelers has been relying on Groundlink for dependable safe, and professional chauffeured car end service in major cities across World.</p>
+                            <p>CodeCraft is an interactive learning platform designed to help students and professionals master programming and tech skills through hands-on learning. From beginner to advanced, our courses are built to boost your confidence and career in the digital world.</p>
                         </div>
                         <div class="footerarea__icon">
                             <ul>
-                                <li><a href="http://facebook.com/"><i class="icofont-facebook"></i></a></li>
-                                <li><a href="http://twitter.com/"><i class="icofont-twitter"></i></a></li>
-                                <li><a href="http://vimeo.com/"><i class="icofont-vimeo"></i></a></li>
-                                <li><a href="http://linkedin.com/"><i class="icofont-linkedin"></i></a></li>
-                                <li><a href="http://skype.com/"><i class="icofont-skype"></i></a></li>
+                                <li><a href="http://facebook.com/jahidulZaid"><i class="icofont-facebook"></i></a></li>
+                                <li><a href="http://x.com/jahidulZaid"><i class="icofont-twitter"></i></a></li>
+                                <li><a href="https://github.com/jahidulzaid"><i class="icofont-github"></i></a></li>
+                                <li><a href="https://linkedin.com/in/jahidulzaid/"><i class="icofont-linkedin"></i></a></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12" data-aos="fade-up">
                     <div class="footerarea__copyright__content">
-                        <p>© 2024 Powered by <a href="#">Edurock</a>. All Rights Reserved.</p>
+                        <p>Copyright © 2025 by <span><a href="https://github.com/jahidulzaid/Interactive-Learning-Platform">Jahidul Islam</a></span>. All Rights Reserved.</p>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12" data-aos="fade-up">

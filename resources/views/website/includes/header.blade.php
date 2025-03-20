@@ -36,7 +36,7 @@
                                 
 
 
-                                <li><a class="headerarea__has__dropdown" href="dashboard/instructor-dashboard.html">Dashboard <i class="icofont-rounded-down"></i></a>
+                                <li><a class="headerarea__has__dropdown" href="{{ route('student.dashboard')}}">Dashboard <i class="icofont-rounded-down"></i></a>
                                     <ul class="headerarea__submenu headerarea__submenu--third--wrap">
                                         <li><a href="{{ route('student.dashboard')}}">Student <i class="icofont-rounded-right"></i></a>
                                             {{-- <ul class="headerarea__submenu--third">

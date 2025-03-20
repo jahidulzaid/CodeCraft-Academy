@@ -132,7 +132,7 @@
 
 
 
-                                    <form action="{{ route('register') }}" method="POST">
+                                    <form id="reg-form" action="{{ route('register') }}" method="POST">
                                         @csrf
                                         <div class="row">
                                             <div class="col-xl-6">
@@ -180,10 +180,16 @@
                                         </div>
 
 
-                                        <div class="login__button">
+                                        {{-- <div class="login__button">
                                             <a class="default__button" href="">
                                                 <button type="submit" class="default__button">Sign Up</button>
                                             </a>
+                                            
+
+                                        </div> --}}
+                                        <div class="login__button">
+                                            
+                                            <a href="#" class="default__button" onclick="document.getElementById('reg-form').submit();">Submit</a>
                                         </div>
                                     </form>
                                 </div>

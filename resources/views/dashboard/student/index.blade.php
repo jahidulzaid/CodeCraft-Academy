@@ -23,10 +23,21 @@
                                     <div class="dashboardarea__inner student__dashboard__inner">
                                         <div class="dashboardarea__left">
                                             <div class="dashboardarea__left__img">
-                                                <img loading="lazy"  src="{{ asset('/') }}website/img/teacher/teacher__2.png" alt="">
+
+                                                {{-- get from db --}}
+                                                @if(Auth::user()->avatar)
+                                                    <img src="{{ Auth::user()->avatar }}" loading="lazy" alt="Avatar"">
+                                                @else
+                                                    <img src="{{ asset('/') }}website/img/teacher/teacher__2.png" loading="lazy"  alt="Default Avatar">
+                                                @endif
+                                                
                                             </div>
                                             <div class="dashboardarea__left__content">
-                                                <h4>Dond Tond</h4>
+                                                
+                                                {{-- get from db --}}
+                                                <h4>Name: {{ Auth::user()->name }}</h4>
+                                                <h5>Email: {{ Auth::user()->email }}</h5>
+                                                
                                                 <ul>
                                                     <li>                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
                                                     9 Courses Enroled
@@ -59,7 +70,7 @@
                             <div class="col-xl-3 col-lg-3 col-md-12">
                                 <div class="dashboard__inner sticky-top">
                                     <div class="dashboard__nav__title">
-                                        <h6>Welcome, Dond Tond </h6>
+                                        <h6>Welcome, {{ Auth::user()->name }} </h6>
                                     </div>
                                     <div class="dashboard__nav">
                                         <ul>
@@ -109,9 +120,18 @@
                                                    Settings</a>
                                             </li>
                                             <li>
-                                                <a href="#">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-volume-1"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
-                                                    Logout</a>
+                                                
+                                                <a href="">
+                                                    <form method="POST" action="{{ route('logout') }}">
+                                                        @csrf
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-logout"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                                                        <button type="submit" style="border:none;">
+                                                            Sign Out
+                                                        </button>
+    
+                                                    </form>
+                                                </a>
+                                            
                                             </li>
                                         </ul>
                                     </div>

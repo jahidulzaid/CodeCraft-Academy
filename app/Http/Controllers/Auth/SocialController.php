@@ -25,17 +25,17 @@ class SocialController extends Controller
         'email' => $googleUser->getEmail(),
     ],
     [
-        'name' => $googleUser->getName(),
+        'name' => $googleUser->getName() ?? 'No Name',
         'google_id' => $googleUser->getId(),
         'avatar' => $googleUser->getAvatar(),
         'access_token' => $googleUser->token,
         'refresh_token' => $token['refresh_token'] ?? null,
-        'password' => Hash::make(Str::random(24)), // <-- this line
+        'password' => Hash::make(Str::random(24)), // use random pass when with google
     ]
 );
 
         Auth::login($user);
 
-        return redirect()->intended('/dashboard');
+        return redirect()->intended('/student-dashboard');
     }
 }

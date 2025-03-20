@@ -18,7 +18,7 @@
  <script src="{{ asset('/') }}website/js/swiper-bundle.min.js"></script>
  <script src="{{ asset('/') }}website/js/main.js"></script>
 
-//google auth
+
  <script src="https://apis.google.com/js/platform.js" async defer></script>
 
  <script>
