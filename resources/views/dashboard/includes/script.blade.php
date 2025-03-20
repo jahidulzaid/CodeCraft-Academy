@@ -1,3 +1,12 @@
+<script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.getItem("theme-color") === "dark" || (!("theme-color" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.classList.add("is_dark");
+    } 
+    if (localStorage.getItem("theme-color") === "light") {
+      document.documentElement.classList.remove("is_dark");
+    } 
+</script>
 
  <!-- JS here -->
  <script src="{{ asset('/') }}website/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -18,9 +27,6 @@
  <script src="{{ asset('/') }}website/js/swiper-bundle.min.js"></script>
  <script src="{{ asset('/') }}website/js/main.js"></script>
 
-//google auth
- <script src="https://apis.google.com/js/platform.js" async defer></script>
-
  <script>
      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
      if (localStorage.getItem("theme-color") === "dark" || (!("theme-color" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
@@ -29,5 +35,4 @@
      if (localStorage.getItem("theme-color") === "light") {
        document.getElementById("light--to-dark-button")?.classList.remove("dark--mode");
      } 
-   </script>
-
+</script>

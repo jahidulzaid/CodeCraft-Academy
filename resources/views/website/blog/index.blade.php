@@ -66,7 +66,7 @@
                                             <li><a href="about-dark.html">About (Dark)<span class="mega__menu__label new">New</span></a></li>
                                             <li><a href="blog.html">Blog</a></li>
                                             <li><a href="blog-dark.html">Blog (Dark)</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                            <li><a href="{{  route('blog-detail') }}">Blog Details</a></li>
                                             <li><a href="blog-details-dark.html">Blog Details (Dark)</a></li>
                                         </ul>
                                     </li>
@@ -338,23 +338,23 @@
                         </div>
                         <div class="blogarea__text__wraper__2">
                             <div class="blogarea__heading__2">
-                                <h3><a href="blog-details.html">Delivering What Consumers Really Value?</a></h3>
+                                <h3><a href="{{  route('blog-detail') }}">Delivering What Consumers Really Value?</a></h3>
                             </div>
                             <div class="blogarea__list__2">
                                 <ul>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{  route('blog-detail') }}">
                                             <i class="icofont-business-man-alt-2"></i> Mirnsdo.H
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{  route('blog-detail') }}">
                                             <i class="icofont-speech-comments"></i> 0 Comments
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{  route('blog-detail') }}">
                                             <i class="icofont-eraser-alt"></i> Association
                                         </a>
                                     </li>
@@ -365,7 +365,7 @@
                                 <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of On the other hand, organizations have the need for integrating in IT departments</p>
                             </div>
                             <div class="blogarea__button__2">
-                                <a href="blog-details.html">READ MORE
+                                <a href="{{  route('blog-detail') }}">READ MORE
                             <i class="icofont-double-right"></i>
                         </a>
                                 <a href="#">
@@ -398,23 +398,23 @@
                         </div>
                         <div class="blogarea__text__wraper__2">
                             <div class="blogarea__heading__2">
-                                <h3><a href="blog-details.html">Here at First Baptist Cape Coral we believe!</a></h3>
+                                <h3><a href="{{  route('blog-detail') }}">Here at First Baptist Cape Coral we believe!</a></h3>
                             </div>
                             <div class="blogarea__list__2">
                                 <ul>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{  route('blog-detail') }}">
                                             <i class="icofont-business-man-alt-2"></i> Mirnsdo.H
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{  route('blog-detail') }}">
                                             <i class="icofont-speech-comments"></i> 0 Comments
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{  route('blog-detail') }}">
                                             <i class="icofont-eraser-alt"></i> Association
                                         </a>
                                     </li>
@@ -425,7 +425,7 @@
                                 <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of On the other hand, organizations have the need for integrating in IT departments</p>
                             </div>
                             <div class="blogarea__button__2">
-                                <a href="blog-details.html">READ MORE
+                                <a href="{{  route('blog-detail') }}">READ MORE
                                     <i class="icofont-double-right"></i>
                                  </a>
                                 <a href="#">
@@ -451,23 +451,23 @@
                         </div>
                         <div class="blogarea__text__wraper__2">
                             <div class="blogarea__heading__2">
-                                <h3><a href="blog-details.html">We are praying for our community and for.</a></h3>
+                                <h3><a href="{{  route('blog-detail') }}">We are praying for our community and for.</a></h3>
                             </div>
                             <div class="blogarea__list__2">
                                 <ul>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{  route('blog-detail') }}">
                                             <i class="icofont-business-man-alt-2"></i> Mirnsdo.H
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{  route('blog-detail') }}">
                                             <i class="icofont-speech-comments"></i> 0 Comments
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{  route('blog-detail') }}">
                                             <i class="icofont-eraser-alt"></i> Association
                                         </a>
                                     </li>
@@ -478,7 +478,7 @@
                                 <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of On the other hand, organizations have the need for integrating in IT departments</p>
                             </div>
                             <div class="blogarea__button__2">
-                                <a href="blog-details.html">READ MORE
+                                <a href="{{  route('blog-detail') }}">READ MORE
                             <i class="icofont-double-right"></i>
                         </a>
                                 <a href="#">
@@ -503,23 +503,23 @@
                         </div>
                         <div class="blogarea__text__wraper__2">
                             <div class="blogarea__heading__2">
-                                <h3><a href="blog-details.html">Delivering What Consumers Really Value?</a></h3>
+                                <h3><a href="{{  route('blog-detail') }}">Delivering What Consumers Really Value?</a></h3>
                             </div>
                             <div class="blogarea__list__2">
                                 <ul>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{  route('blog-detail') }}">
                                             <i class="icofont-business-man-alt-2"></i> Mirnsdo.H
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{  route('blog-detail') }}">
                                             <i class="icofont-speech-comments"></i> 0 Comments
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{  route('blog-detail') }}">
                                             <i class="icofont-eraser-alt"></i> Association
                                         </a>
                                     </li>
@@ -530,7 +530,7 @@
                                 <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of On the other hand, organizations have the need for integrating in IT departments</p>
                             </div>
                             <div class="blogarea__button__2">
-                                <a href="blog-details.html">READ MORE
+                                <a href="{{  route('blog-detail') }}">READ MORE
                             <i class="icofont-double-right"></i>
                         </a>
                                 <a href="#">
@@ -777,7 +777,7 @@
                             <input type="text" placeholder="Enter name*">
                             <input type="text" placeholder="Enter your mail*">
                             <input type="text" placeholder="Massage*">
-                            <a class="default__button" href="blog-details.html">SEND MASSAGE</a>
+                            <a class="default__button" href="{{  route('blog-detail') }}">SEND MASSAGE</a>
                         </div>
 
                     </div>
@@ -787,16 +787,16 @@
                         <h4 class="sidebar__title">Popular tag</h4>
                         <div class="populer__tag__list">
                             <ul>
-                                <li><a href="blog-details.html">Business</a></li>
-                                <li><a href="blog-details.html">Design</a></li>
-                                <li><a href="blog-details.html">apps</a></li>
-                                <li><a href="blog-details.html">landing page</a></li>
-                                <li><a href="blog-details.html">data</a></li>
-                                <li><a href="blog-details.html">book</a></li>
-                                <li><a href="blog-details.html">Design</a></li>
-                                <li><a href="blog-details.html">book</a></li>
-                                <li><a href="blog-details.html">landing page</a></li>
-                                <li><a href="blog-details.html">data</a></li>
+                                <li><a href="{{  route('blog-detail') }}">Business</a></li>
+                                <li><a href="{{  route('blog-detail') }}">Design</a></li>
+                                <li><a href="{{  route('blog-detail') }}">apps</a></li>
+                                <li><a href="{{  route('blog-detail') }}">landing page</a></li>
+                                <li><a href="{{  route('blog-detail') }}">data</a></li>
+                                <li><a href="{{  route('blog-detail') }}">book</a></li>
+                                <li><a href="{{  route('blog-detail') }}">Design</a></li>
+                                <li><a href="{{  route('blog-detail') }}">book</a></li>
+                                <li><a href="{{  route('blog-detail') }}">landing page</a></li>
+                                <li><a href="{{  route('blog-detail') }}">data</a></li>
                             </ul>
                         </div>
 
