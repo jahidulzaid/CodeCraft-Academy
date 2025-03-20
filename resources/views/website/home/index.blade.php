@@ -111,7 +111,7 @@
                         </div>
                     </div>
                     <div class="service__content">
-                        <h3><a href="course-details.html">Business Studies</a></h3>
+                        <h3><a href="{{ route('course-details')}}">Business Studies</a></h3>
                         <p>Business is succes</p>
                     </div>
                     <div class="service__small__img">
@@ -150,7 +150,7 @@
                         </div>
                     </div>
                     <div class="service__content">
-                        <h3><a href="course-details.html">Programming Tech</a></h3>
+                        <h3><a href="{{ route('course-details')}}">Programming Tech</a></h3>
                         <p>update your skill</p>
                     </div>
                     <div class="service__small__img">
@@ -181,7 +181,7 @@
                         </div>
                     </div>
                     <div class="service__content">
-                        <h3><a href="course-details.html">Artist & Design</a></h3>
+                        <h3><a href="{{ route('course-details')}}">Artist & Design</a></h3>
                         <p>show creativity</p>
                     </div>
                     <div class="service__small__img">
@@ -211,7 +211,7 @@
                         </div>
                     </div>
                     <div class="service__content">
-                        <h3><a href="course-details.html">Machine Learning</a></h3>
+                        <h3><a href="{{ route('course-details')}}">Machine Learning</a></h3>
                         <p>Science is power</p>
                     </div>
                     <div class="service__small__img">
@@ -245,7 +245,7 @@
                         </div>
                     </div>
                     <div class="service__content">
-                        <h3><a href="course-details.html">Health & Fitness</a></h3>
+                        <h3><a href="{{ route('course-details')}}">Health & Fitness</a></h3>
                         <p>health is wealth</p>
                     </div>
                     <div class="service__small__img">
@@ -277,7 +277,7 @@
                         </div>
                     </div>
                     <div class="service__content">
-                        <h3><a href="course-details.html">Marketing Analysis</a></h3>
+                        <h3><a href="{{ route('course-details')}}">Marketing Analysis</a></h3>
                         <p>Science is power</p>
                     </div>
                     <div class="service__small__img">
@@ -331,9 +331,9 @@
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 grid-item filter2 filter3">
                 <div class="gridarea__wraper">
                     <div class="gridarea__img">
-                        <img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_2.png" alt="grid">
+                        <a href="{{ route('course-details')}}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_2.png" alt="grid"> </a>
                         <div class="gridarea__small__button">
-                            <div class="grid__badge blue__color">Mechanical</div>
+                            <div class="grid__badge blue__color">Programming</div>
                         </div>
                         <div class="gridarea__small__icon">
                             <a href="#"><i class="icofont-heart-alt"></i></a>
@@ -343,29 +343,24 @@
                     <div class="gridarea__content">
                         <div class="gridarea__list">
                             <ul>
-                                <li>
-                                    <i class="icofont-book-alt"></i> 29 Lesson
-                                </li>
-                                <li>
-                                    <i class="icofont-clock-time"></i> 2 hr 10 min
-                                </li>
+                                <li><i class="icofont-book-alt"></i> 30 Lessons</li>
+                                <li><i class="icofont-clock-time"></i> 5 hr 15 min</li>
                             </ul>
                         </div>
                         <div class="gridarea__heading">
-                            <h3><a href="#">Nidnies course to under stand
-                                about softwere</a></h3>
+                            <h3><a href="{{ route('course-details')}}">Python Programming for Beginners</a></h3>
                         </div>
                         <div class="gridarea__price green__color">
-                            $32.00<del>/$67.00</del>
-                            <span>.Free</span>
+                            $0.00<del>/$39.00</del>
+                            <span>Free</span>
 
                         </div>
                         <div class="gridarea__bottom">
                             <a href="instructor-details.html">
                                 <div class="gridarea__small__img">
-                                    <img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_small_2.jpg" alt="grid">
+                                    <img loading="lazy"  src="{{ asset(path: '/') }}website/img/grid/grid_small_1.jpg" alt="grid">
                                     <div class="gridarea__small__content">
-                                        <h6>Rinis Jhon</h6>
+                                        <h6>Jahidul Islam</h6>
                                     </div>
                                 </div>
                             </a>
@@ -385,7 +380,7 @@
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 grid-item filter4 filter5">
                 <div class="gridarea__wraper">
                     <div class="gridarea__img">
-                        <a href="course-details.html"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_3.png" alt="grid"></a>
+                        <a href="{{ route('course-details')}}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_2.png" alt="grid"></a>
                         <div class="gridarea__small__button">
                             <div class="grid__badge pink__color">Development</div>
                         </div>
@@ -397,20 +392,16 @@
                     <div class="gridarea__content">
                         <div class="gridarea__list">
                             <ul>
-                                <li>
-                                    <i class="icofont-book-alt"></i> 25 Lesson
-                                </li>
-                                <li>
-                                    <i class="icofont-clock-time"></i> 1 hr 40 min
-                                </li>
+                                <li><i class="icofont-book-alt"></i> 20 Lessons</li>
+                                <li><i class="icofont-clock-time"></i> 4 hr 00 min</li>
                             </ul>
                         </div>
                         <div class="gridarea__heading">
-                            <h3><a href="course-details.html">Minws course to under stand
-                                about solution</a></h3>
+                            <h3><a href="{{ route('course-details')}}">Java Programming Essentials</a></h3>
+
                         </div>
                         <div class="gridarea__price">
-                            $40.00 <del>/ $67.00</del>
+                            $10.00 <del>/ $67.00</del>
                             <span> <del class="del__2">Free</del></span>
 
                         </div>
@@ -420,7 +411,7 @@
                                 <div class="gridarea__small__img">
                                     <img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_small_3.jpg" alt="grid">
                                     <div class="gridarea__small__content">
-                                        <h6>Micle Jhon</h6>
+                                        <h6>Jahidul Islam</h6>
                                     </div>
                                 </div>
                             </a>
@@ -458,17 +449,17 @@
                             <div class="default__small__button">Course List</div>
                         </div>
                         <div class="section__title__heading heading__underline">
-                            <h2>Register Your <span>Account </span>Get free access to <small>60000</small> online course
+                            <h2>Register Your <span>Account</span> and Get access to course
                             </h2>
                         </div>
                     </div>
                     <div class="registerarea__content">
                         <div class="registerarea__video">
                             <div class="video__pop__btn">
-                                <a class="video-btn" href="https://www.youtube.com/watch?v=vHdclsdkp28"> <img loading="lazy"  src="{{ asset('/') }}website/img/icon/video.png" alt=""></a>
+                                <a class="video-btn" href="https://www.youtube.com/watch?v=x7X9w_GIm1s"> <img loading="lazy"  src="{{ asset('/') }}website/img/icon/video.png" alt=""></a>
                             </div>
                             <div class="registerarea__para">
-                                <p>Learn Something new & Build Your Career From Anywhere In The World</p>
+                                <p>Python in 100 Seconds</p>
                             </div>
 
                         </div>
