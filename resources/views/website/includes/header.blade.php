@@ -95,6 +95,9 @@
 
                                 </li>
 
+                                <li><a class="headerarea__has__dropdown" href="{{ route('ai.ask') }}">Ask AI</a>
+                                </li>
+
                             </ul>
                         </nav>
                     </div>

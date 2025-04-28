@@ -11,6 +11,7 @@ use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\CompilerController;
+use App\Http\Controllers\AIController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -55,6 +56,14 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 Route::get('/auth/google', [SocialController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('/auth/google/callback', [SocialController::class, 'handleGoogleCallback']);
 
+
+// AI
+
+Route::get('/ask-ai', function () {
+    return view('website.ai.ask-ai');
+})->name('ai.view');
+
+Route::post('/ask-ai', [AIController::class, 'ask'])->name('ai.ask');
 
 
 
