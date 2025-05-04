@@ -34,16 +34,7 @@
                         <div class="footerarea__content">
                             <p>CodeCraft is an interactive learning platform designed to help students and professionals master programming and tech skills through hands-on learning. From beginner to advanced, our courses are built to boost your confidence and career in the digital world.</p>
                         </div>
-                        <div class="foter__bottom__text">
-                            <div class="footer__bottom__icon">
-                                <i class="icofont-clock-time"></i>
-                            </div>
-                            <div class="footer__bottom__content">
-                                <h6>Opening Houres</h6>
-                                <span>Mon - Sat(8.00 - 6.00)</span>
-                                <span>Sunday - Closed</span>
-                            </div>
-                        </div>
+                        
 
                     </div>
                 </div>
@@ -56,18 +47,6 @@
                             <ul>
                                 <li>
                                     <a href="#">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="#">Teachers</a>
-                                </li>
-                                <li>
-                                    <a href="#">Partner</a>
-                                </li>
-                                <li>
-                                    <a href="#">Room-Details</a>
-                                </li>
-                                <li>
-                                    <a href="#">Gallery</a>
                                 </li>
                             </ul>
                         </div>
@@ -83,20 +62,12 @@
                         <div class="footerarea__list">
                             <ul>
                                 <li>
-                                    <a href="#">Ui Ux Design</a>
+                                    <a href="#">Python</a>
                                 </li>
                                 <li>
-                                    <a href="#">Web Development</a>
+                                    <a href="#">Java</a>
                                 </li>
-                                <li>
-                                    <a href="#">Business Strategy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Softwere Development</a>
-                                </li>
-                                <li>
-                                    <a href="#">Business English</a>
-                                </li>
+
                             </ul>
                         </div>
 

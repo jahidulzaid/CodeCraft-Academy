@@ -68,7 +68,13 @@ Route::post('/ask-ai', [AIController::class, 'ask'])->name('ai.ask');
 
 
 // backend
+//student
 Route::get('/student-dashboard',[StudentController::class,'index'])->name('student.dashboard');
+Route::get('/student-profile',[StudentController::class,'profile'])->name('student.profile');
+Route::get('/student-enrolled-courses',[StudentController::class,'enrolledCourses'])->name('student.enrolled-courses');
+Route::get('/student-reviews',[StudentController::class,'reviews'])->name('student.reviews');
+Route::get('/student-my-quiz-attempts',[StudentController::class,'myQuizAttempts'])->name('student.my-quiz-attempts');
+
 
 
 

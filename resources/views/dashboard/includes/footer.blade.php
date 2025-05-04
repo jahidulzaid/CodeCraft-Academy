@@ -54,18 +54,7 @@
                                 <li>
                                     <a href="#">About Us</a>
                                 </li>
-                                <li>
-                                    <a href="#">Teachers</a>
-                                </li>
-                                <li>
-                                    <a href="#">Partner</a>
-                                </li>
-                                <li>
-                                    <a href="#">Room-Details</a>
-                                </li>
-                                <li>
-                                    <a href="#">Gallery</a>
-                                </li>
+
                             </ul>
                         </div>
 
@@ -80,20 +69,12 @@
                         <div class="footerarea__list">
                             <ul>
                                 <li>
-                                    <a href="#">Ui Ux Design</a>
+                                    <a href="#">Python</a>
                                 </li>
                                 <li>
-                                    <a href="#">Web Development</a>
+                                    <a href="#">Java</a>
                                 </li>
-                                <li>
-                                    <a href="#">Business Strategy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Softwere Development</a>
-                                </li>
-                                <li>
-                                    <a href="#">Business English</a>
-                                </li>
+
                             </ul>
                         </div>
 
