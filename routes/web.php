@@ -50,20 +50,20 @@ Route::post('/signin/custom', [LoginController::class, 'signin'])->name('signin.
 
 //registration
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
+
 //google auth
-
-
 Route::get('/auth/google', [SocialController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('/auth/google/callback', [SocialController::class, 'handleGoogleCallback']);
 
 
 // AI
 
+
+
+Route::post('/ask-ai', [AIController::class, 'ask'])->name('ai.ask');
 Route::get('/ask-ai', function () {
     return view('website.ai.ask-ai');
 })->name('ai.view');
-
-Route::post('/ask-ai', [AIController::class, 'ask'])->name('ai.ask');
 
 
 
@@ -74,6 +74,8 @@ Route::get('/student-profile',[StudentController::class,'profile'])->name('stude
 Route::get('/student-enrolled-courses',[StudentController::class,'enrolledCourses'])->name('student.enrolled-courses');
 Route::get('/student-reviews',[StudentController::class,'reviews'])->name('student.reviews');
 Route::get('/student-my-quiz-attempts',[StudentController::class,'myQuizAttempts'])->name('student.my-quiz-attempts');
+Route::get('/student-assignments',[StudentController::class,'assignments'])->name('student.assignments');
+Route::get('/student-settings',[StudentController::class,'settings'])->name('student.settings');
 
 
 

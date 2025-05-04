@@ -26,29 +26,21 @@
                                             <div class="dashboardarea__left__img">
 
                                                 {{-- get from db --}}
-                                                @if(Auth::check() && Auth::user()->avatar)
-                                                    <img src="{{ Auth::user()->avatar }}" loading="lazy" alt="Avatar">
+                                                @if(Auth::user()->avatar)
+                                                    <img src="{{ Auth::user()->avatar }}" loading="lazy" alt="Avatar"">
                                                 @else
-                                                    <img src="{{ asset('website/img/teacher/teacher__2.png') }}" loading="lazy" alt="Default Avatar">
+                                                    <img src="{{ asset('/') }}website/img/teacher/teacher__2.png" loading="lazy"  alt="Default Avatar">
                                                 @endif
-
                                                 
                                             </div>
                                             <div class="dashboardarea__left__content">
                                                 
                                                 {{-- get from db --}}
-                                                @if(Auth::check())
-                                                    <h4>Name: {{ Auth::user()->name }}</h4>
-                                                    <h5>Email: {{ Auth::user()->email }}</h5>
-                                                @else
-                                                    <h4>Name: Guest</h4>
-                                                    <h5>Email: Not Available</h5>
-                                                @endif
-
+                                                <h4>Name: {{ Auth::user()->name }}</h4>
+                                                <h5>Email: {{ Auth::user()->email }}</h5>
                                                 
                                                 <ul>
-                                                    <li>
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                                                    <li>                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
                                                     9 Courses Enroled
                                                     </li>
                                                     <li>
@@ -81,21 +73,12 @@
                         <div class="row">
 
 
+
+
                             <div class="col-xl-3 col-lg-3 col-md-12">
                                 <div class="dashboard__inner sticky-top">
                                     <div class="dashboard__nav__title">
-                                        <h6>
-                                            @if(Auth::check())
-                                            Name: {{ Auth::user()->name }}
-                                            
-                                        @else
-                                            Name: Guest
-                                        @endif
-
-                                        </h6>
-
-
-                                        
+                                        <h6>Welcome, {{ Auth::user()->name }} </h6>
                                     </div>
                                     <div class="dashboard__nav">
                                         <ul>
@@ -131,7 +114,7 @@
                                                     Assignments</a>
                                             </li>
                                             <li>
-                                                <a href="{{route('student.settings')}}">
+                                                <a href="student-settings.html">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
                                                    Settings</a>
                                             </li>
@@ -156,140 +139,207 @@
                             </div>
 
 
+
+
                             <div class="col-xl-9 col-lg-9 col-md-12">
                                 <div class="dashboard__content__wraper">
                                     <div class="dashboard__section__title">
-                                        <h4>Summery</h4>
+                                        <h4>Assignment</h4>
                                     </div>
+    
                                     <div class="row">
-                                        <div class="col-xl-4 col-lg-6 col-md-12 col-12">
-                                            <div class="dashboard__single__counter">
-                                                <div class="counterarea__text__wraper">
-                                                    <div class="counter__img">
-                                                        <img loading="lazy"  src="{{ asset('/') }}website/img/counter/counter__1.png" alt="counter">
-                                                    </div>
-                                                    <div class="counter__content__wraper">
-                                                        <div class="counter__number">
-                                                            <span class="counter">27</span>+
-                        
-                                                        </div>
-                                                        <p>Enrolled Courses</p>
-                    
-                                                    </div>
-                                                </div>
+                                        <div class="col-xl-6 col-lg-4 col-md-4 col-12">
+                                            <div class="dashboard__select__heading">
+                                                <span>Courses</span>
+                                            </div>
+                                            <div class="dashboard__selector">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>All</option>
+                                                <option value="1">Web Design</option>
+                                                <option value="2">Graphic</option>
+                                                <option value="3">English</option>
+                                                <option value="4">Spoken English</option>
+                                                <option value="5">Art Painting</option>
+                                                <option value="6">App Development</option>
+                                                <option value="7">Web Application</option>
+                                                <option value="7">Php Development</option>
+                                              </select>
                                             </div>
                                         </div>
-                                        <div class="col-xl-4 col-lg-6 col-md-12 col-12">
-                                            <div class="dashboard__single__counter">
-                                                <div class="counterarea__text__wraper">
-                                                    <div class="counter__img">
-                                                        <img loading="lazy"  src="{{ asset('/') }}website/img/counter/counter__2.png" alt="counter">
-                                                    </div>
-                                                    <div class="counter__content__wraper">
-                                                        <div class="counter__number">
-                                                            <span class="counter">08</span>+
-                        
-                                                        </div>
-                                                        <p>Active Courses</p>
-                        
-                                                    </div>
-                                                </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                                            <div class="dashboard__select__heading">
+                                                <span>SHORT BY</span>
+                                            </div>
+                                            <div class="dashboard__selector">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Default</option>
+                                                <option value="1">Trending</option>
+                                                <option value="2">Price: low to high</option>
+                                                <option value="3">Price: low to low</option>
+                                              </select>
                                             </div>
                                         </div>
-                                        <div class="col-xl-4 col-lg-6 col-md-12 col-12">
-                                            <div class="dashboard__single__counter">
-                                                <div class="counterarea__text__wraper">
-                                                    <div class="counter__img">
-                                                        <img loading="lazy"  src="{{ asset('/') }}website/img/counter/counter__3.png" alt="counter">
-                                                    </div>
-                                                    <div class="counter__content__wraper">
-                                                        <div class="counter__number">
-                                                            <span class="counter">12</span>
-                        
-                                                        </div>
-                                                        <p>Complete Courses</p>
-                        
-                                                    </div>
-                                                </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                                            <div class="dashboard__select__heading">
+                                                <span>SHORT BY OFFER</span>
+                                            </div>
+                                            <div class="dashboard__selector">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Free</option>
+                                                <option value="1">paid</option>
+                                                <option value="2">premimum</option>
+                                              </select>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="dashboard__content__wraper">
-                                    <div class="dashboard__section__title">
-                                        <h4>Feedbacks</h4>
-                                        <a href="../course.html">See More...</a>
-                                    </div>
-                                    <div class="row">
+                                    <hr class="mt-40">
+                                  <div class="row">
+                                    
                                     <div class="col-xl-12">
                                         <div class="dashboard__table table-responsive">
                                             <table>
                                                 <thead>
                                                     <tr>
-                                                        <th>Course Name</th>
-                                                        <th>Enrolled</th>
-                                                        <th>Rating</th>
+                                                        <th>Assignment Name</th>
+                                                        <th>Total Marks</th>
+                                                        <th>Total Submit</th>
+                                                        <th></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <th><a href="#">Javascript</a></th>
-                                                        <td>1100</td>
+                                                        <th>
+                                                         
+                                                            <span>Write a  the 5</span>
+                                                            <p>course: <a href="#">Fundamentals</a></p>
+                                                        </th>
                                                         <td>
-                                                            <div class="dashboard__table__star">
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                            <p>80</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>2</p>
+                                                        </td>
+                                                    
+                                                    
+                                                        <td>
+                                                            <div class="dashboard__button__group">
+    
+                                                                <a class="dashboard__small__btn__2" href="#">
+                                                                    <i class="icofont-edit"></i>Edit
+                                                                </a>
+                                                                <a class="dashboard__small__btn__2 dashboard__small__btn__3" href="#">
+                                                                    <i class="icofont-paper-plane"></i> Submit
+                                                                </a>
+                                                                
+                                                                <a class="dashboard__small__btn__2" href="#">
+                                                                    <i class="icofont-download"></i> Download
+                                                                </a>
                                                             </div>
                                                         </td>
                                                     </tr>
+    
                                                     <tr class="dashboard__table__row">
-                                                        <th><a href="#">PHP</a></th>
-                                                        <td>700</td>
+                                                        <th>
+                                                         
+                                                            <span>Write a  the 5</span>
+                                                            <p>course: <a href="#">Fundamentals</a></p>
+                                                        </th>
                                                         <td>
-                                                            <div class="dashboard__table__star">
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                            <p>80</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>2</p>
+                                                        </td>
+                                                    
+                                                    
+                                                        <td>
+                                                            <div class="dashboard__button__group">
+    
+                                                                <a class="dashboard__small__btn__2" href="#">
+                                                                    <i class="icofont-edit"></i>Edit
+                                                                </a>
+                                                                <a class="dashboard__small__btn__2 dashboard__small__btn__3" href="#">
+                                                                    <i class="icofont-paper-plane"></i> Submit
+                                                                </a>
+                                                                
+                                                                <a class="dashboard__small__btn__2" href="#">
+                                                                    <i class="icofont-download"></i> Download
+                                                                </a>
                                                             </div>
                                                         </td>
                                                     </tr>
+    
                                                     <tr>
-                                                        <th><a href="#">HTML</a></th>
-                                                        <td>1350</td>
+                                                        <th>
+                                                         
+                                                            <span>Write a  the 5</span>
+                                                            <p>course: <a href="#">Fundamentals</a></p>
+                                                        </th>
                                                         <td>
-                                                            <div class="dashboard__table__star">
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                            <p>80</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>2</p>
+                                                        </td>
+                                                    
+                                                    
+                                                    
+                                                        <td>
+                                                            <div class="dashboard__button__group">
+    
+                                                                <a class="dashboard__small__btn__2" href="#">
+                                                                    <i class="icofont-edit"></i>Edit
+                                                                </a>
+                                                                <a class="dashboard__small__btn__2 dashboard__small__btn__3" href="#">
+                                                                    <i class="icofont-paper-plane"></i> Submit
+                                                                </a>
+                                                                
+                                                                <a class="dashboard__small__btn__2" href="#">
+                                                                    <i class="icofont-download"></i> Download
+                                                                </a>
                                                             </div>
                                                         </td>
                                                     </tr>
+    
                                                     <tr class="dashboard__table__row">
-                                                        <th><a href="#">Graphic</a></th>
-                                                        <td>1266</td>
+                                                        <th>
+                                                         
+                                                            <span>Write a  the 5</span>
+                                                            <p>course: <a href="#">Fundamentals</a></p>
+                                                        </th>
                                                         <td>
-                                                            <div class="dashboard__table__star">
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                                            <p>80</p>
+                                                        </td>
+                                                        <td>
+                                                            <p>2</p>
+                                                        </td>
+                                                    
+                                                    
+                                                        <td>
+                                                            <div class="dashboard__button__group">
+    
+                                                                <a class="dashboard__small__btn__2" href="#">
+                                                                    <i class="icofont-edit"></i>Edit
+                                                                </a>
+                                                                <a class="dashboard__small__btn__2 dashboard__small__btn__3" href="#">
+                                                                    <i class="icofont-paper-plane"></i> Submit
+                                                                </a>
+                                                                
+                                                                <a class="dashboard__small__btn__2" href="#">
+                                                                    <i class="icofont-download"></i> Download
+                                                                </a>
                                                             </div>
                                                         </td>
                                                     </tr>
+    
+                                                 
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
-                                    </div>
+                                  </div>
                                 </div>
+                        
                             </div>
     
                           

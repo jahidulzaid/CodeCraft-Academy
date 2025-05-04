@@ -4,10 +4,22 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class StudentController extends Controller
 {
-    function index(){
+    // function index(){
+    //     return view('dashboard.student.index');
+    // }
+
+
+    public function index()
+    {
+        if (!Auth::check()) {
+            return redirect()->route('signin')->with('error', 'Please login first.');
+        }
+
+        
         return view('dashboard.student.index');
     }
     function profile(){
@@ -21,5 +33,11 @@ class StudentController extends Controller
     }
     function myQuizAttempts(){
         return view('dashboard.student.my-quiz-attempts');
+    }
+    function assignments(){
+        return view('dashboard.student.assignments');
+    }
+    function settings(){
+        return view('dashboard.student.settings');
     }
 }

@@ -56,7 +56,7 @@
                                 <button class="single__tab__link active" data-bs-toggle="tab" data-bs-target="#projects__one" type="button">Login</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="single__tab__link" data-bs-toggle="tab" data-bs-target="#projects__two" type="button">Sing up</button>
+                                <button class="single__tab__link" data-bs-toggle="tab" data-bs-target="#projects__two" type="button">Sign up</button>
                             </li>
                         </ul>
                     </div>
