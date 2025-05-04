@@ -103,14 +103,14 @@
                                         <p>or Log-in with</p>
 
                                         <ul class="login__social__btn">
-                                            <li><a class="default__button login__button__1" href="#"><i class="icofont-facebook"></i> FB</a></li>
+                                            {{-- <li><a class="default__button login__button__1" href="#"><i class="icofont-facebook"></i> FB</a></li> --}}
                                             <li>
-                                                <a href="{{ route('google.login') }}"
-                                                class="default__button login__button__1">
-                                                    
-                                                    <i class="icofont-google"></i>
-                                                    Google
-                                                </a>
+                                                {{-- <a href="{{ route('google.login') }}" class="default__button login__button__1">                                                    
+                                                    <i class="icofont-google"></i> Google
+                                                </a> --}}
+                                                <a href="{{ route('google.login', ['role' => 'instructor']) }}" class="default__button login__button__1"> <i class="icofont-google"></i> Login as Instructor with Google</a>
+                                                <a href="{{ route('google.login', ['role' => 'student']) }} " class="default__button login__button__1" > <i class="icofont-google"></i> Login as Student with Google</a>
+
 
 
                                             </li>

@@ -87,8 +87,8 @@
                                     </ul>
                                 </li>
 
-                                <li><a class="headerarea__has__dropdown" href="{{ route('shop') }}">Shop</a>
-                                </li>
+                                {{-- <li><a class="headerarea__has__dropdown" href="{{ route('shop') }}">Shop</a>
+                                </li> --}}
 
                                 <li class="mega__menu position-static">
                                     <a class="headerarea__has__dropdown" href="{{ route('compiler.index') }}">Compiler</a>

@@ -7,6 +7,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\Dashboard\StudentController;
 use App\Http\Controllers\Auth\SocialController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebsiteController;
@@ -77,7 +78,8 @@ Route::get('/student-my-quiz-attempts',[StudentController::class,'myQuizAttempts
 Route::get('/student-assignments',[StudentController::class,'assignments'])->name('student.assignments');
 Route::get('/student-settings',[StudentController::class,'settings'])->name('student.settings');
 
-
+//instructor
+Route::get('/instructor-dashboard', [InstructorController::class,'index'])->name('instructor.dashboard');
 
 
 

@@ -36,15 +36,15 @@
                                 
 
 
-                                <li><a class="headerarea__has__dropdown" href="dashboard/instructor-dashboard.html">Dashboard <i class="icofont-rounded-down"></i></a>
+                                <li><a class="headerarea__has__dropdown" href="{{ route('student.dashboard')}}">Dashboard <i class="icofont-rounded-down"></i></a>
                                     <ul class="headerarea__submenu headerarea__submenu--third--wrap">
                                         <li><a href="{{ route('student.dashboard')}}">Student <i class="icofont-rounded-right"></i></a>
                                             {{-- <ul class="headerarea__submenu--third">
                                                 <li><a href="{{ route('student.dashboard')}}">Dashboard</a></li>
                                                 <li><a href="dashboard/student-profile.html">Profile</a></li>
-                                                <li><a href="dashboard/student-message.html">Message</a></li>
+
                                                 <li><a href="dashboard/student-enrolled-courses.html">Enrolled Courses</a></li>
-                                                <li><a href="dashboard/student-wishlist.html">Wishlist</a></li>
+
                                                 <li><a href="dashboard/student-reviews.html">Review</a></li>
                                                 <li><a href="dashboard/student-my-quiz-attempts.html">My Quiz</a></li>
                                                 <li><a href="dashboard/student-assignments.html">Assignment</a></li>
@@ -57,7 +57,7 @@
                                             {{-- <ul class="headerarea__submenu--third">
                                                 <li><a href="dashboard/instructor-dashboard.html">Inst. Dashboard</a></li>
                                                 <li><a href="dashboard/instructor-profile.html">Inst. Profile</a></li>
-                                                <li><a href="dashboard/instructor-message.html">Message</a></li>
+                                                
                                                 <li><a href="dashboard/instructor-wishlist.html">Wishlist</a></li>
                                                 <li><a href="dashboard/instructor-reviews.html">Review</a></li>
                                                 <li><a href="dashboard/instructor-my-quiz-attempts.html">My Quiz</a></li>
@@ -74,7 +74,7 @@
                                             {{-- <ul class="headerarea__submenu--third">
                                                 <li><a href="dashboard/admin-dashboard.html">Admin Dashboard</a></li>
                                                 <li><a href="dashboard/admin-profile.html">Admin Profile</a></li>
-                                                <li><a href="dashboard/admin-message.html">Message</a></li>
+                                                
                                                 <li><a href="dashboard/admin-course.html">Courses</a></li>
                                                 <li><a href="dashboard/admin-reviews.html">Review</a></li>
                                                 <li><a href="dashboard/admin-quiz-attempts.html">Admin Quiz</a></li>
@@ -87,12 +87,15 @@
                                     </ul>
                                 </li>
 
-                                <li><a class="headerarea__has__dropdown" href="{{ route('shop') }}">Shop</a>
-                                </li>
+                                {{-- <li><a class="headerarea__has__dropdown" href="{{ route('shop') }}">Shop</a>
+                                </li> --}}
 
                                 <li class="mega__menu position-static">
                                     <a class="headerarea__has__dropdown" href="{{ route('compiler.index') }}">Compiler</a>
 
+                                </li>
+
+                                <li><a class="headerarea__has__dropdown" href="{{ url('http://localhost:8501/') }}">Ask AI</a>
                                 </li>
 
                             </ul>
@@ -101,6 +104,7 @@
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6">
                     <div class="headerarea__right">
+
 
 
                         <div class="headerarea__login">
