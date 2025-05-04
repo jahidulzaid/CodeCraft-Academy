@@ -39,7 +39,7 @@
     .compiler-editor-container {
       flex: 1;
       display: flex;
-      /* flex-direction: column; */
+      flex-direction: column;
     }
 
     #compiler-editor {
@@ -80,44 +80,13 @@
       box-sizing: border-box;
       font-family: monospace;
     }
-    .compiler-sidebar {
-      width: 200px;
-      background-color: #d6d3d3;
-      color: white;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    h3{
-      text-align: center;
-    }
-
-    #compiler-output {
-      height: 150px;
-      background: #bcbaba;
-      color: black;
-      padding: 10px;
-      overflow-y: auto;
-      font-family: monospace;
-      border-radius: 5px;
-      margin-top: 10px;
-      white-space: pre-wrap;
-      word-break: break-word;
-    }
-
 </style>
 
 
 
 <div class="compiler-container">
-  
-
-  <div class="compiler-editor-container">
-    <div id="compiler-editor">{{ $code ?? '# Write your Python/Java/C++ code here '   }}</div>
-
-  </div>
-
-
   <div class="compiler-sidebar">
+    <h3>Settings</h3>
     <form method="POST" action="{{ route('compiler.run') }}">
       @csrf
 
@@ -139,8 +108,13 @@
 
       <textarea name="code" id="hiddenCode" style="display:none;">{{ $code ?? '' }}</textarea>
     </form>
-    <hr>
-    <h3>Output</h3>
+  </div>
+
+  <div class="compiler-editor-container">
+    <div id="compiler-editor">{{ $code ?? '# Write your Python/Java/C++ code here' }}</div>
+    <div class="compiler-controls">
+      <span>Editor</span>
+    </div>
     <pre id="compiler-output">@if(isset($output)){{ $output }}@endif</pre>
   </div>
 </div>
@@ -150,11 +124,6 @@
 <script>
   var editor = ace.edit("compiler-editor");
   editor.setTheme("ace/theme/white");
-
-  editor.setOptions({
-    maxLines: Infinity,
-    minLines: 20 // You can set this to whatever minimum size you want
-  });
 
   const languageSelect = document.getElementById('language');
   function setEditorMode() {
