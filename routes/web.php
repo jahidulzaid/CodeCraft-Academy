@@ -7,7 +7,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\Dashboard\StudentController;
 use App\Http\Controllers\Auth\SocialController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\InstructorController;
+use App\Http\Controllers\Dashboard\InstructorController;
 use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebsiteController;
@@ -80,6 +80,11 @@ Route::get('/student-settings',[StudentController::class,'settings'])->name('stu
 
 //instructor
 Route::get('/instructor-dashboard', [InstructorController::class,'index'])->name('instructor.dashboard');
+Route::get('/instructor-profile', [InstructorController::class,'profile'])->name('instructor.profile');
+Route::get('/instructor-wishlist', [InstructorController::class,'wishlist'])->name('instructor.wishlist');
+Route::get('/instructor-reviews', [InstructorController::class,'reviews'])->name('instructor.reviews');
+Route::get('/instructor-my_quiz_attempts', [InstructorController::class,'my_quiz_attempts'])->name('instructor.my_quiz_attempts');
+Route::get('/instructor-order_history', [InstructorController::class,'order_history'])->name('instructor.order_history');
 
 
 

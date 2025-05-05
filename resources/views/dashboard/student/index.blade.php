@@ -26,11 +26,22 @@
                                             <div class="dashboardarea__left__img">
 
                                                 {{-- get from db --}}
-                                                @if(Auth::check() && Auth::user()->avatar)
-                                                    <img src="{{ Auth::user()->avatar }}" loading="lazy" alt="Avatar">
+                                                @if(Auth::check())
+                                                    @if(Auth::user()->avatar)
+                                                        <img src="{{ Auth::user()->avatar }}" loading="lazy" alt="Avatar">
+                                                    @else
+                                                        @if(Auth::user()->role === 'student')
+                                                            <img src="{{ asset('website/img/student/default_student.png') }}" loading="lazy" alt="Default Student Avatar">
+                                                        @elseif(Auth::user()->role === 'instructor')
+                                                            <img src="{{ asset('website/img/instructor/default_instructor.png') }}" loading="lazy" alt="Default Instructor Avatar">
+                                                        @else
+                                                            <img src="{{ asset('website/img/teacher/teacher__2.png') }}" loading="lazy" alt="Default Avatar">
+                                                        @endif
+                                                    @endif
                                                 @else
-                                                    <img src="{{ asset('website/img/teacher/teacher__2.png') }}" loading="lazy" alt="Default Avatar">
+                                                    <img src="{{ asset('website/img/teacher/teacher__2.png') }}" loading="lazy" alt="Guest Avatar">
                                                 @endif
+
 
                                                 
                                             </div>
@@ -38,8 +49,18 @@
                                                 
                                                 {{-- get from db --}}
                                                 @if(Auth::check())
-                                                    <h4>Name: {{ Auth::user()->name }}</h4>
-                                                    <h5>Email: {{ Auth::user()->email }}</h5>
+                                                    @if(Auth::user()->role === 'student')
+                                                        <h3>Student Dashboard</h3>
+                                                        <h4>{{ Auth::user()->name }}</h4>
+                                                        <h5>{{ Auth::user()->email }}</h5>
+                                                    @elseif(Auth::user()->role === 'instructor')
+                                                        <h3>Instructor Dashboard</h3>
+                                                        <h4>{{ Auth::user()->name }}</h4>
+                                                        <h5>{{ Auth::user()->email }}</h5>
+                                                    @else
+                                                        <h4>Name: {{ Auth::user()->name }}</h4>
+                                                        <h5>Email: {{ Auth::user()->email }}</h5>
+                                                    @endif
                                                 @else
                                                     <h4>Name: Guest</h4>
                                                     <h5>Email: Not Available</h5>

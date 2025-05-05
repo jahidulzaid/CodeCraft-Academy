@@ -53,7 +53,7 @@
                                         </li>
                                         
                                         <li>
-                                            <a href="dashboard/instructor-dashboard.html">Instructor <i class="icofont-rounded-right"></i></a>
+                                            <a href="{{ route('instructor.dashboard')}}">Instructor <i class="icofont-rounded-right"></i></a>
                                             {{-- <ul class="headerarea__submenu--third">
                                                 <li><a href="dashboard/instructor-dashboard.html">Inst. Dashboard</a></li>
                                                 <li><a href="dashboard/instructor-profile.html">Inst. Profile</a></li>
