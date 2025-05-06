@@ -21,17 +21,24 @@ class InstructorController extends Controller
     function profile(){
         return view('dashboard.instructor.profile');
     }
-    function wishlist(){
-        return view('dashboard.instructor.wishlist');
-    }
+
     function reviews(){
         return view('dashboard.instructor.reviews');
     }
-    function my_quiz_attempts(){
-        return view('dashboard.instructor.my_quiz_attempts');
+    function my_course(){
+        return view('dashboard.instructor.my_course');
     }
-    function order_history(){
-        return view('dashboard.instructor.order_history');
+    function  announcments(){
+        return view('dashboard.instructor.announcments');
+    }
+    function  quiz_attempt(){
+        return view('dashboard.instructor.quiz_attempts');
+    }
+    function  assignments(){
+        return view('dashboard.instructor.assignments');
+    }
+    function  settings(){
+        return view('dashboard.instructor.settings');
     }
     
 }

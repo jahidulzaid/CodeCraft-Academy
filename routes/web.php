@@ -81,10 +81,15 @@ Route::get('/student-settings',[StudentController::class,'settings'])->name('stu
 //instructor
 Route::get('/instructor-dashboard', [InstructorController::class,'index'])->name('instructor.dashboard');
 Route::get('/instructor-profile', [InstructorController::class,'profile'])->name('instructor.profile');
-Route::get('/instructor-wishlist', [InstructorController::class,'wishlist'])->name('instructor.wishlist');
+
 Route::get('/instructor-reviews', [InstructorController::class,'reviews'])->name('instructor.reviews');
-Route::get('/instructor-my_quiz_attempts', [InstructorController::class,'my_quiz_attempts'])->name('instructor.my_quiz_attempts');
-Route::get('/instructor-order_history', [InstructorController::class,'order_history'])->name('instructor.order_history');
+
+Route::get('/instructor-my_course', [InstructorController::class,'my_course'])->name('instructor.my_course');
+Route::get('/instructor-announcments', [InstructorController::class,'announcments'])->name('instructor.announcments');
+Route::get('/instructor-quiz_attempt', [InstructorController::class,'quiz_attempt'])->name('instructor.quiz_attempt');
+Route::get('/instructor-assignments', [InstructorController::class,'assignments'])->name('instructor.assignments');
+Route::get('/instructor-settings', [InstructorController::class,'settings'])->name('instructor.settings');
+
 
 
 

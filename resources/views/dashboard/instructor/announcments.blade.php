@@ -17,6 +17,7 @@
         <div class="container-fluid full__width__padding">
             <div class="row">
 
+
                 <div class="col-xl-12">
                     <div class="dashboardarea__wraper">
                         <div class="dashboardarea__img">
@@ -63,14 +64,7 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="dashboardarea__star">
-                                    <i class="icofont-star"></i>
-                                    <i class="icofont-star"></i>
-                                    <i class="icofont-star"></i>
-                                    <i class="icofont-star"></i>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                        <span>4.0 (120 Reviews)</span>
-                                </div>
+
                                 <div class="dashboardarea__right">
                                     <div class="dashboardarea__right__button">
                                         <a class="default__button" href="create-course.html">Create a New Course
@@ -82,9 +76,13 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
             </div>
         </div>
-   
+
         <div class="dashboard">
             <div class="container-fluid full__width__padding">
                 <div class="row">
@@ -193,73 +191,180 @@
                         </div>
                     </div>
 
-
                     <div class="col-xl-9 col-lg-9 col-md-12">
                         <div class="dashboard__content__wraper">
                             <div class="dashboard__section__title">
-                                <h4>My Profile</h4>
+                                <h4>Announcements</h4>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="dashboard__form">Registration Date</div>
+
+                            <div class="dashboard__Announcement__wraper">
+
+                            <div class="row ">
+                                <div class="col-xl-8 col-lg-6 col-md-6 col-12">
+                                    <div class="dashboard__Announcement">
+                                        <h5>Notify your all students.</h5>
+                                        <p>Create Announcement</p>
+                                    </div>
                                 </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <div class="dashboard__form">20, January 2024 9:00 PM</div>
-                                </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="dashboard__form dashboard__form__margin">First Name</div>
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <div class="dashboard__form dashboard__form__margin">Michle</div>
-                                </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="dashboard__form dashboard__form__margin">Last Name</div>
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <div class="dashboard__form dashboard__form__margin">Obema</div>
-                                </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="dashboard__form dashboard__form__margin">Username</div>
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <div class="dashboard__form dashboard__form__margin">obema007</div>
-                                </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="dashboard__form dashboard__form__margin">Email</div>
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <div class="dashboard__form dashboard__form__margin">obema@example.com</div>
-                                </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="dashboard__form dashboard__form__margin">Phone Number</div>
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <div class="dashboard__form dashboard__form__margin">+55 669 4456 25987</div>
-                                </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="dashboard__form dashboard__form__margin">Expert</div>
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <div class="dashboard__form dashboard__form__margin">Graphics Design</div>
-                                </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="dashboard__form dashboard__form__margin">Biography</div>
-                                </div>
-                                <div class="col-lg-8 col-md-8">
-                                    <div class="dashboard__form dashboard__form__margin">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores veniam, delectus accusamus nesciunt laborum repellat laboriosam, deserunt possimus itaque iusto perferendis voluptatum quaerat cupiditate vitae. Esse aut illum perferendis nulla, corporis impedit quasi alias est!</div>
+                                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                                    <a class="default__button" href="#">Add New Announcement</a>
                                 </div>
                             </div>
                         </div>
-                    
+
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-4 col-md-4 col-12">
+                                    <div class="dashboard__select__heading">
+                                        <span>Courses</span>
+                                    </div>
+                                    <div class="dashboard__selector">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>All</option>
+                                        <option value="1">Web Design</option>
+                                        <option value="2">Graphic</option>
+                                        <option value="3">English</option>
+                                        <option value="4">Spoken English</option>
+                                        <option value="5">Art Painting</option>
+                                        <option value="6">App Development</option>
+                                        <option value="7">Web Application</option>
+                                        <option value="7">Php Development</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                                    <div class="dashboard__select__heading">
+                                        <span>SHORT BY</span>
+                                    </div>
+                                    <div class="dashboard__selector">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Default</option>
+                                        <option value="1">Trending</option>
+                                        <option value="2">Price: low to high</option>
+                                        <option value="3">Price: low to low</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                                    <div class="dashboard__select__heading">
+                                        <span>SHORT BY OFFER</span>
+                                    </div>
+                                    <div class="dashboard__selector">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Free</option>
+                                        <option value="1">paid</option>
+                                        <option value="2">premimum</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="mt-40">
+                            <div class="row">
+                            
+                            <div class="col-xl-12">
+                                <div class="dashboard__table table-responsive">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Announcements</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    <span>March 16, 2024</span>
+                                                    <p>10.00am</p>
+                                                </th>
+                                                <td>
+                                                    <span>Announcement Title</span>
+                                                    <p>Course: Fundamentals 101</p>
+                                                </td>
+                                                <td>
+                                                    <div class="dashboard__button__group">
+                                                        <a class="dashboard__small__btn" href="#">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> Edit</a>
+                                                        <a class="dashboard__small__btn" href="#">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg> Delete</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="dashboard__table__row">
+                                                <th>
+                                                    <span>June 16, 2024</span>
+                                                    <p>10.00am</p>
+                                                </th>
+                                                <td>
+                                                    <span>Announcement Title</span>
+                                                    <p>Course: Fundamentals 101</p>
+                                                </td>
+                                                <td>
+                                                    <div class="dashboard__button__group">
+                                                        <a class="dashboard__small__btn" href="#">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> Edit</a>
+                                                        <a class="dashboard__small__btn" href="#">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg> Delete</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>
+                                                    <span>June 16, 2024</span>
+                                                    <p>12.00am</p>
+                                                </th>
+                                                <td>
+                                                    <span>Web Design</span>
+                                                    <p>Course: Fundamentals 101</p>
+                                                </td>
+                                                <td>
+                                                    <div class="dashboard__button__group">
+                                                        <a class="dashboard__small__btn" href="#">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> Edit</a>
+                                                        <a class="dashboard__small__btn" href="#">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg> Delete</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="dashboard__table__row">
+                                                <th>
+                                                    <span>App Development</span>
+                                                    <p>10.00am</p>
+                                                </th>
+                                                <td>
+                                                    <span>Announcement Title</span>
+                                                    <p>Course: Fundamentals 101</p>
+                                                </td>
+                                                <td>
+                                                    <div class="dashboard__button__group">
+                                                        <a class="dashboard__small__btn" href="#">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> Edit</a>
+                                                        <a class="dashboard__small__btn" href="#">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg> Delete</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                
                     </div>
+
+
 
                   
                 </div>
             </div>
         </div>
-    </div>
 
-     <!-- dashboardarea__menu__end   -->
+    </div>
+     <!-- dashboardarea__area__end   -->
 
     
     
