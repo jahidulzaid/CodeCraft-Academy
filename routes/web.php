@@ -20,11 +20,6 @@ use App\Http\Controllers\AIController;
 
 
 
-
-
-
-
-
 // front end
 
 
@@ -98,6 +93,17 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/dashboard', function () { return view('dashboard'); })->name('dashboard');
 
     //mine
+    Route::middleware(['auth'])->group(function () {
+    Route::get('/instructor-dashboard', [InstructorController::class, 'index'])->name('instructor.dashboard');
+});
+
+
+
+
+
+
+
+
 
 
 

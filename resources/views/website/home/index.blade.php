@@ -529,15 +529,13 @@
                         <img loading="lazy"  src="{{ asset('/') }}website/img/blog/blog_1.png" alt="blog">
                         <div class="blogarea__date">
                             20
-                            <span>Oct</span>
+                            <span>May 2025</span>
                         </div>
                     </div>
                     <div class="blogarea__text__wraper">
-                        <h3><a href="#">It is a long established fact that a reader
-                        will be Standard Part</a></h3>
+                        <h3><a href="#">Python 3.13 Alpha Released with Faster Performance</a></h3>
                         <div class="blogarea__para">
-                            <p>A wonderful serenity has taken possssion of my entire souing like these sweet morning spring whch enjoy with my whole heart I am alone, and feel the charm of existenceths spot whch was create For the bliss of souls
-                                like mineing am so happy my dear frend so absori bed in the exquste sens of mere. A wonderful serenity has taken posseson of my entire soung like these sweet mornngs spring whch enjoy …</p>
+                            <p>The Python Software Foundation has released the alpha version of Python 3.13, featuring improved performance with the new adaptive interpreter. It also includes experimental support for the strict mode, helping developers catch bugs earlier. Python 3.13 is expected to be more memory-efficient and faster in execution.</p>
                         </div>
 
                         <div class="blogarea__icon">
@@ -546,7 +544,23 @@
                                     <img loading="lazy"  src="{{ asset('/') }}website/img/blog/blog_2.png" alt="">
                                 </div>
                                 <div class="blogarea__name">
-                                    <span> By</span>: Mirnsdo Jons
+                                    <span> By</span>:
+                                    @if(Auth::check())
+                                                    @if(Auth::user()->role === 'student')
+                                      
+                                                        {{ Auth::user()->name }}
+                                                    @elseif(Auth::user()->role === 'instructor')
+                                                        
+                                                        {{ Auth::user()->name }}
+                                                        
+                                                    @else
+                                                        {{ Auth::user()->name }}
+                                                        
+                                                    @endif
+                                                @else
+                                                    Guest
+                                                @endif
+
                                 </div>
                             </div>
                             <div class="blogarea__list">
@@ -577,12 +591,12 @@
                         <img loading="lazy"  src="{{ asset('/') }}website/img/blog/blog_3.png" alt="blog">
                         <div class="blogarea__date small__date">
                             20
-                            <span>Oct</span>
+                            <span>Dec</span>
                         </div>
                     </div>
                     <div class="blogarea__text__wraper blogarea__text__wraper__2">
-                        <h3><a href="#">It is a long established fact that a reader
-                        will be Standard Part</a></h3>
+                        <h3><a href="#">PyCon 2025 Highlights: AI, Web Dev & Python in Education
+                            April 2025</a></h3>
                     </div>
 
                 </div>
@@ -596,8 +610,8 @@
                         </div>
                     </div>
                     <div class="blogarea__text__wraper blogarea__text__wraper__2">
-                        <h3><a href="#">It is a long established fact that a reader
-                        will be Standard Part</a></h3>
+                        <h3><a href="#">Java 22 Officially Released: Features Virtual Threads & String Templates
+                            March 2025</a></h3>
                     </div>
 
                 </div>

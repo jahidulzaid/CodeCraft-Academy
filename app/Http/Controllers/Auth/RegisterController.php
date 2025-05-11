@@ -17,20 +17,29 @@ class RegisterController extends Controller
             'username' => 'required|string|unique:users',
             'email' => 'required|email|unique:users',
             'password' => 'required|confirmed|min:6',
+            'role' => 'required|in:student,instructor', // Add this
         ]);
     
 
         $user = User::create([
-            'name' => $request->first_name . ' ' . $request->last_name, // Combine here
+            'name' => $request->first_name . ' ' . $request->last_name,
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => $request->role, // Store role
         ]);
 
         auth()->login($user);
 
-        return redirect('/student-dashboard');
+        if ($user->role === 'student') {
+            return redirect('/student-dashboard');
+        } elseif ($user->role === 'instructor') {
+            return redirect('/instructor-dashboard');
+        } else {
+            return redirect('/'); // fallback
+        }
+
     }
 }

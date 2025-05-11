@@ -12,21 +12,35 @@ class LoginController extends Controller
         return view('website.login-registration.index');
     }
     public function signin(Request $request)
-    {
-        // Validate user credentials
-        $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
+{
+    // Validate user credentials
+    $request->validate([
+        'email' => 'required|email',
+        'password' => 'required',
+    ]);
 
-        // Try to login
-        if (Auth::attempt($request->only('email', 'password'))) {
-            // Login success
-            return redirect()->intended('/student-dashboard')->with('success', 'Logged in successfully!');
+    // Try to login
+    if (Auth::attempt($request->only('email', 'password'))) {
+        // Login success
+        $user = Auth::user();
+
+        // Redirect based on role
+        switch ($user->role) {
+            case 'student':
+                return redirect()->intended('/student-dashboard')->with('success', 'Logged in successfully!');
+            case 'instructor':
+                return redirect()->intended('/instructor-dashboard')->with('success', 'Logged in successfully!');
+            case 'admin':
+                return redirect()->intended('/admin-dashboard')->with('success', 'Logged in successfully!');
+            default:
+                Auth::logout();
+                return redirect()->route('signin')->with('error', 'Unauthorized role.');
         }
-
-        // Login failed
-        return redirect()->back()->with('error', 'Invalid credentials!');
     }
+
+    // Login failed
+    return redirect()->back()->with('error', 'Invalid credentials!');
+}
+
 
 }
