@@ -45,22 +45,22 @@
 
                                         {{-- get from db --}}
                                         @if(Auth::check())
-                                            @if(Auth::user()->role === 'student')
-                                                <h3>Student Dashboard</h3>
-                                                <h4>{{ Auth::user()->name }}</h4>
-                                                <h5>{{ Auth::user()->email }}</h5>
-                                            @elseif(Auth::user()->role === 'instructor')
-                                                <h3 style="color: rgb(33, 119, 239)">Instructor Dashboard</h3>
-                                                <h4>{{ Auth::user()->name }}</h4>
-                                                <h5>{{ Auth::user()->email }}</h5>
-                                            @else
-                                                <h4>Name: {{ Auth::user()->name }}</h4>
-                                                <h5>Email: {{ Auth::user()->email }}</h5>
-                                            @endif
+                                        @if(Auth::user()->role === 'student')
+                                            <h3 style="color: rgb(33, 119, 239)">Student Dashboard</h3>
+                                            <h4>{{ Auth::user()->name }}</h4>
+                                            <h5>{{ Auth::user()->email }}</h5>
+                                        @elseif(Auth::user()->role === 'instructor')
+                                            <h3 style="color: rgb(33, 119, 239)">Instructor Dashboard</h3>
+                                            <h4>{{ Auth::user()->name }}</h4>
+                                            <h5>{{ Auth::user()->email }}</h5>
                                         @else
-                                            <h4>Name: Guest</h4>
-                                            <h5>Email: Not Available</h5>
+                                            <h4>Name: {{ Auth::user()->name }}</h4>
+                                            <h5>Email: {{ Auth::user()->email }}</h5>
                                         @endif
+                                    @else
+                                        <h4>Name: Guest</h4>
+                                        <h5>Email: Not Available</h5>
+                                    @endif
                                     </div>
                                 </div>
                                 <div class="dashboardarea__star">

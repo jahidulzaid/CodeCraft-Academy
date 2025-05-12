@@ -44,10 +44,9 @@
                                     </div>
                                     <div class="dashboardarea__left__content">
 
-                                        {{-- get from db --}}
                                         @if(Auth::check())
                                             @if(Auth::user()->role === 'student')
-                                                <h3>Student Dashboard</h3>
+                                                <h3 style="color: rgb(33, 119, 239)">Student Dashboard</h3>
                                                 <h4>{{ Auth::user()->name }}</h4>
                                                 <h5>{{ Auth::user()->email }}</h5>
                                             @elseif(Auth::user()->role === 'instructor')
