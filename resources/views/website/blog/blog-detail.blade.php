@@ -50,22 +50,46 @@
                         <img loading="lazy"  src="{{ asset('/') }}website/img/blog/blog_21.png" alt="blog">
                     </div>
                     <div class="blog__details__content">
-                        <p class="content__1" data-aos="fade-up">We have covered many special events such as fireworks, fairs, parades, races, walks, awards ceremonies, fashion shows, sporting events, and even a memorial service.
+                        <p class="content__1" data-aos="fade-up">Understanding Python: A Powerful Programming Language for Everyone
                         </p>
-                        <p class="content__2" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate vestibulum rhoncus, dolor eget viverra pretium, dolor tellus aliquet nunc, vitae ultricies erat elit eu lacus. Vestibulum non justo consectetur,
-                            cursus ante, tincidunt sapien. Nulla quis diam sit amet turpis interd enim. Vivamus faucibus ex sed nibh egestas elementum. Mauris et bibendum dui. Aenean consequat pulvinar luctus. Suspendisse consectetur tristique
-                            tortor
+                        <p class="content__2" data-aos="fade-up">In the ever-evolving world of technology, Python has emerged as one of the most popular and versatile programming languages. Whether you're a beginner taking your first steps into coding or a seasoned developer building complex systems, Python offers simplicity, readability, and a vast ecosystem to meet your needs.
+
+                        In this blog, we’ll explore Python in depth—its history, features, real-world applications, and how you can start learning it today.
                         </p>
                         <div class="blog__details__heading" data-aos="fade-up">
-                            <h5>Experience is over the world visit</h5>
+                            <h5>A Brief History of Python</h5>
                         </div>
-                        <p class="content__3" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate vestibulum Phasellus rhoncus, dolor eget viverra pretium, dolor tellus aliquet nunc, vitae ultricies erat elit eu lacus. Vestibulum non justo
-                            consectetur, cursus ante, tincidunt sapien. Nulla quis diam sit amet turpis interdum accumsan quis nec enim. Vivamus faucibus ex sed nibh egestas elementum. Mauris et bibendum dui. Aenean consequat pulvinar luctus</p>
-                        <p class="content__4" data-aos="fade-up">We have covered many special events such as fireworks, fairs, parades, races, walks, awards ceremonies, fashion shows, sporting events, and even a memorial service.
+                        <p class="content__3" data-aos="fade-up">Python was created in the late 1980s by Guido van Rossum at the Centrum Wiskunde & Informatica (CWI) in the Netherlands. It was officially released in 1991 as Python 0.9.0.
+
+                        Guido wanted to build a language that was powerful yet easy to read and write, which led to Python’s famous philosophy:
+
+                        "Simple is better than complex."
+
+                        The name "Python" was inspired not by the snake, but by the British comedy series Monty Python's Flying Circus, reflecting Guido’s desire for the language to be fun and approachable.</p>
+                        <p class="content__4" data-aos="fade-up">Python’s design philosophy focuses on code readability, making it an excellent choice for beginners and professionals alike. Here are some standout features:
+
+<br>
+                        🟢 Simple and Clean Syntax
+                        Python code is easy to read and write, closely resembling human language.
+<br>
+                        🟢 Interpreted Language
+                        Python doesn't need to be compiled before running, making development faster and easier.
+<br>
+                        🟢 Dynamically Typed
+                        No need to declare variable types; Python determines them at runtime.
+<br>
+                        🟢 Object-Oriented and Functional
+                        Supports both paradigms, giving developers flexibility in design.
+<br>
+                        🟢 Large Standard Library
+                        Includes built-in modules for handling strings, files, math, web protocols, databases, and more.
+<br>
+                        🟢 Cross-Platform Compatibility
+                        Python runs seamlessly on Windows, macOS, and Linux.
                         </p>
-                        <p class="content__5" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate vestibulum Phasellus rhoncus, dolor eget viverra pretium, dolor tellus aliquet nunc, vitae ultricies erat elit eu lacus. Vestibulum non justo
-                            consectetur, cursus ante, tincidunt sapien. Nulla quis diam sit amet turpis interdum accumsan quis nec enim. Vivamus faucibus ex sed nibh egestas elementum. Mauris et bibendum dui. Aenean consequat pulvinar luctus.
-                            Suspendisse consectetur tristique tortor</p>
+                        <p class="content__5" data-aos="fade-up">
+
+                        </p>
                         <div class="blockquate__wraper" data-aos="fade-up">
                             <div class="blockquate__content">
                                 <h3>Smashing Podcast Episode With Paul Boag What Is Conversion Optimization</h3>
@@ -79,10 +103,10 @@
 
 
                         <div class="blog__details__heading" data-aos="fade-up">
-                            <h5>Experience is over the world visit</h5>
+                            <h5>Popular Use Cases of Python</h5>
                         </div>
 
-                        <p class="content__6" data-aos="fade-up">We have covered many special events such as fireworks, fairs, parades, races, walks, awards ceremonies, fashion shows, sporting events, and even a memorial service</p>
+                        <p class="content__6" data-aos="fade-up">Python is incredibly versatile. Here are just a few areas where Python shines:</p>
                         <p class="content__7" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate vestibulum Phasellus rhoncus, dolor eget viverra pretium, dolor tellus aliquet nunc, vitae ultricies erat elit eu lacus. Vestibulum non justo
                             consectetur, cursus ante, tincidunt sapien. Nulla quis diam sit amet turpis interdum accumsan quis nec enim. Vivamus faucibus ex sed nibh egestas elementum. Mauris et bibendum dui. Aenean consequat pulvinar luctus.
                             Suspendisse consectetur tristique tortor</p>
@@ -102,25 +126,25 @@
                             </div>
                             <div class="col-xl-8 col-lg-8 col-md-8">
                                 <div class="blog__details__heading__2" data-aos="fade-up">
-                                    <h5>Why search Is Important ?</h5>
+                                    <h5>Why python Is Important ?</h5>
                                 </div>
                                 <div class="aboutarea__list__2 blog__details__list__2" data-aos="fade-up">
                                     <ul>
                                         <li>
                                             <i class="icofont-check"></i>
-                                            <p>Lorem Ipsum is simply dummying text of the printing andtypesetting industry most of the standard.</p>
+                                            <p>💻 Web Development</p>
                                         </li>
                                         <li>
                                             <i class="icofont-check"></i>
-                                            <p>Lorem Ipsum is simply dummying text of the printing andtypesetting industry most of the standard.</p>
+                                            <p>🤖 Machine Learning & AI</p>
                                         </li>
                                         <li>
                                             <i class="icofont-check"></i>
-                                            <p>Lorem Ipsum is simply dummying text of the printing andtypesetting industry most of the standard.</p>
+                                            <p>📊 Data Analysis & Visualization</p>
                                         </li>
                                         <li>
                                             <i class="icofont-check"></i>
-                                            <p>Lorem Ipsum is simply dummying text of the printing andtypesetting industry most of the standard.</p>
+                                            <p>🎮 Game Development</p>
                                         </li>
 
                                     </ul>
@@ -323,17 +347,43 @@
                 <div class="blogsidebar__content__wraper__2" data-aos="fade-up">
                     <div class="blogsidebar__content__inner__2">
                         <div class="blogsidebar__img__2">
-                            <img loading="lazy"  src="{{ asset('/') }}website/img/blog/blog_10.png" alt="blog">
+
+
+                            {{-- get from db --}}
+                                        @if(Auth::check())
+                                            @if(Auth::user()->avatar)
+                                                <img src="{{ Auth::user()->avatar }}" loading="lazy" alt="Avatar">
+                                            @else
+                                                @if(Auth::user()->role === 'student')
+                                                    <img src="{{ asset('website/img/student/default_student.png') }}" loading="lazy" alt="Default Student Avatar">
+                                                @elseif(Auth::user()->role === 'instructor')
+                                                    <img src="{{ asset('website/img/instructor/default_instructor.png') }}" loading="lazy" alt="Default Instructor Avatar">
+                                                @else
+                                                    <img src="{{ asset('website/img/teacher/teacher__2.png') }}" loading="lazy" alt="Default Avatar">
+                                                @endif
+                                            @endif
+                                        @else
+                                            <img src="{{ asset('website/img/teacher/teacher__2.png') }}" loading="lazy" alt="Guest Avatar">
+                                        @endif
+
+
+
+
+
+
+
+
+                            <!-- <img loading="lazy"  src="{{ asset('/') }}website/img/blog/blog_10.png" alt="blog">     -->
                         </div>
                         <div class="blogsidebar__name__2">
                             <h5>
-                                <a href="#"> Rosalina D. Willaim</a>
+                                <a href="#"> Jahidul Islam</a>
 
                             </h5>
-                            <p>Blogger/Photographer</p>
+                            <p>Instructor</p>
                         </div>
                         <div class="blog__sidebar__text__2">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Veritatis distinctio suscipit reprehenderit atque</p>
+                            <p>Passionate about coding and AI, Jahidul Islam shares insights on Python and modern tech through hands-on learning and projects.</p>
                         </div>
                         <div class="blogsidbar__icon__2">
                             <ul>

@@ -574,9 +574,9 @@
 
                                 <div class="gridarea__wraper gridarea__wraper__2 gridarea__course__list" data-aos="fade-up">
                                     <div class="gridarea__img">
-                                        <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_1.png" alt="grid"></a>
+                                        <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/blog/blog_6.png" alt="grid"></a>
                                         <div class="gridarea__small__button">
-                                            <div class="grid__badge">Data & Tech</div>
+                                            <div class="grid__badge">Language</div>
                                         </div>
                                         <div class="gridarea__small__icon">
                                             <a href="#"><i class="icofont-heart-alt"></i></a>
@@ -595,13 +595,12 @@
                                             </ul>
                                         </div>
                                         <div class="gridarea__heading">
-                                            <h3><a href="{{ route('course-details') }}">Become a product Manager learn the
-                                                            skills & job.
+                                            <h3><a href="{{ route('course-details') }}">Python Programming Language
                                                         </a></h3>
                                         </div>
                                         <div class="gridarea__price">
                                             $32.00 <del>/ $67.00</del>
-                                            <span>Free.</span>
+                                            <!-- <span>Buy Fast</span> -->
 
                                         </div>
                                         <div class="gridarea__bottom">
@@ -610,7 +609,7 @@
                                                     <div class="gridarea__small__img">
                                                         <img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_small_1.jpg" alt="grid">
                                                         <div class="gridarea__small__content">
-                                                            <h6>Mirnsdo .H</h6>
+                                                            <h6>Jahidul Islam</h6>
                                                         </div>
                                                     </div>
                                                 </a>
@@ -697,190 +696,7 @@
 
 
 
-                                <div class="gridarea__wraper gridarea__wraper__2 gridarea__course__list" data-aos="fade-up">
-                                    <div class="gridarea__img">
-                                        <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_3.png" alt="grid"></a>
-                                        <div class="gridarea__small__button">
-                                            <div class="grid__badge pink__color">Development</div>
-                                        </div>
-                                        <div class="gridarea__small__icon">
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                        </div>
 
-                                    </div>
-                                    <div class="gridarea__content">
-                                        <div class="gridarea__list">
-                                            <ul>
-                                                <li>
-                                                    <i class="icofont-book-alt"></i> 23 Lesson
-                                                </li>
-                                                <li>
-                                                    <i class="icofont-clock-time"></i> 1 hr 30 min
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gridarea__heading">
-                                            <h3><a href="{{ route('course-details') }}">Strategy law and with for organization
-                                                        Foundation 
-                                                    </a></h3>
-                                        </div>
-                                        <div class="gridarea__price">
-                                            $32.00 <del>/ $67.00</del>
-                                            <span>Free.</span>
-
-                                        </div>
-                                        <div class="gridarea__bottom">
-                                            <div class="gridarea__bottom__left">
-                                                <a href="instructor-details.html">
-                                                    <div class="gridarea__small__img">
-                                                        <img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_small_1.jpg" alt="grid">
-                                                        <div class="gridarea__small__content">
-                                                            <h6>Mirnsdo .H</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-
-                                                <div class="gridarea__star">
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <span>(44)</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="gridarea__details">
-                                                <a href="{{ route('course-details') }}">Know Details
-                                                        <i class="icofont-arrow-right"></i>
-                                                    </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="gridarea__wraper gridarea__wraper__2 gridarea__course__list" data-aos="fade-up">
-                                    <div class="gridarea__img">
-                                        <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_4.png" alt="grid"></a>
-                                        <div class="gridarea__small__button">
-                                            <div class="grid__badge green__color">Ui & UX Design</div>
-                                        </div>
-                                        <div class="gridarea__small__icon">
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                        </div>
-
-                                    </div>
-                                    <div class="gridarea__content">
-                                        <div class="gridarea__list">
-                                            <ul>
-                                                <li>
-                                                    <i class="icofont-book-alt"></i> 23 Lesson
-                                                </li>
-                                                <li>
-                                                    <i class="icofont-clock-time"></i> 1 hr 30 min
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gridarea__heading">
-                                            <h3><a href="{{ route('course-details') }}">The business Intelligence analyst with
-                                                        Course & 2024
-                                                    </a></h3>
-                                        </div>
-                                        <div class="gridarea__price">
-                                            $32.00 <del>/ $67.00</del>
-                                            <span>Free.</span>
-
-                                        </div>
-                                        <div class="gridarea__bottom">
-                                            <div class="gridarea__bottom__left">
-                                                <a href="instructor-details.html">
-                                                    <div class="gridarea__small__img">
-                                                        <img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_small_1.jpg" alt="grid">
-                                                        <div class="gridarea__small__content">
-                                                            <h6>Mirnsdo .H</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-
-                                                <div class="gridarea__star">
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <span>(44)</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="gridarea__details">
-                                                <a href="{{ route('course-details') }}">Know Details
-                                                        <i class="icofont-arrow-right"></i>
-                                                    </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="gridarea__wraper gridarea__wraper__2 gridarea__course__list" data-aos="fade-up">
-                                    <div class="gridarea__img">
-                                        <a href="{{ route('course-details') }}"><img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_5.png" alt="grid"></a>
-                                        <div class="gridarea__small__button">
-                                            <div class="grid__badge orange__color">Data & Tech</div>
-                                        </div>
-                                        <div class="gridarea__small__icon">
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                        </div>
-
-                                    </div>
-                                    <div class="gridarea__content">
-                                        <div class="gridarea__list">
-                                            <ul>
-                                                <li>
-                                                    <i class="icofont-book-alt"></i> 23 Lesson
-                                                </li>
-                                                <li>
-                                                    <i class="icofont-clock-time"></i> 1 hr 30 min
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="gridarea__heading">
-                                            <h3><a href="{{ route('course-details') }}">Become a product Manager learn the skills & job.
-                                                    </a></h3>
-                                        </div>
-                                        <div class="gridarea__price">
-                                            $32.00 <del>/ $67.00</del>
-                                            <span>Free.</span>
-
-                                        </div>
-                                        <div class="gridarea__bottom">
-                                            <div class="gridarea__bottom__left">
-                                                <a href="instructor-details.html">
-                                                    <div class="gridarea__small__img">
-                                                        <img loading="lazy"  src="{{ asset('/') }}website/img/grid/grid_small_1.jpg" alt="grid">
-                                                        <div class="gridarea__small__content">
-                                                            <h6>Mirnsdo .H</h6>
-                                                        </div>
-                                                    </div>
-                                                </a>
-
-                                                <div class="gridarea__star">
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <i class="icofont-star"></i>
-                                                    <span>(44)</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="gridarea__details">
-                                                <a href="{{ route('course-details') }}">Know Details
-                                                        <i class="icofont-arrow-right"></i>
-                                                    </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
                             </div>
 

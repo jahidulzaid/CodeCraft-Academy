@@ -47,7 +47,7 @@
                                         {{-- get from db --}}
                                         @if(Auth::check())
                                             @if(Auth::user()->role === 'student')
-                                                <h3 style="color: rgb(33, 119, 239)">Student Dashboard</h3>
+                                                <h3>Student Dashboard</h3>
                                                 <h4>{{ Auth::user()->name }}</h4>
                                                 <h5>{{ Auth::user()->email }}</h5>
                                             @elseif(Auth::user()->role === 'instructor')
@@ -121,9 +121,24 @@
                                             My Profile</a>
                                     </li>
                                     <li>
+                                        <a href="{{ route('instructor.wishlist')}}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bookmark"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                                            Wishlist</a>
+                                    </li>
+                                    <li>
                                         <a href="{{ route('instructor.reviews')}}">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                                             Reviews</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('instructor.my_quiz_attempts')}}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                                            My Quiz Attempts</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('instructor.order_history')}}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                            Order History</a>
                                     </li>
                                 </ul>
                             </div>
@@ -134,22 +149,22 @@
                             <div class="dashboard__nav">
                                 <ul>
                                     <li>
-                                        <a href="{{ route('instructor.my_course')}}">
+                                        <a href="instructor-course.html">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                                             My Course</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('instructor.announcments')}}">
+                                        <a href="instructor-announcments.html">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-volume-1"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
                                             Announcments</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('instructor.quiz_attempt')}}">
+                                        <a href="instructor-quiz-attempts.html">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                                             Quiz Attempt</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('instructor.assignments')}}">
+                                        <a href="instructor-assignments.html">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-volume-1"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
                                             Assignments</a>
                                     </li>
@@ -163,23 +178,14 @@
                             <div class="dashboard__nav">
                                 <ul>
                                     <li>
-                                        <a href="{{ route('instructor.settings')}}">
+                                        <a href="instructor-settings.html">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
                                           Settings</a>
                                     </li>
                                     <li>
-                                                
-                                        <a href="">
-                                            <form method="POST" action="{{ route('logout') }}">
-                                                @csrf
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-logout"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
-                                                <button type="submit" style="border:none;">
-                                                    Logout
-                                                </button>
-
-                                            </form>
-                                        </a>
-                                    
+                                        <a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-volume-1"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                                            Logout</a>
                                     </li>
                               
                               
@@ -194,36 +200,13 @@
                     <div class="col-xl-9 col-lg-9 col-md-12">
                         <div class="dashboard__content__wraper">
                             <div class="dashboard__section__title">
-                                <h4>Courses</h4>
+                                <h4>Wishlist</h4>
                             </div>
                             <div class="row">
-                                <div class="col-xl-12 aos-init aos-animate" data-aos="fade-up">
-                                    <ul class="nav  about__button__wrap dashboard__button__wrap" id="myTab" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <button class="single__tab__link active" data-bs-toggle="tab" data-bs-target="#projects__one" type="button" aria-selected="true" role="tab">Publish</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="single__tab__link" data-bs-toggle="tab" data-bs-target="#projects__two" type="button" aria-selected="false" role="tab" tabindex="-1">Pending</button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="single__tab__link" data-bs-toggle="tab" data-bs-target="#projects__three" type="button" aria-selected="false" role="tab" tabindex="-1">Draft</button>
-                                        </li>
-                                 
-            
-            
-                                    </ul>
-                                </div>
-
-
-                                <div class="tab-content tab__content__wrapper aos-init aos-animate" id="myTabContent" data-aos="fade-up">
-
-                                    <div class="tab-pane fade active show" id="projects__one" role="tabpanel" aria-labelledby="projects__one">
-                                        <div class="row">
-                                       
-                                            <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                                            <div class="col-xl-4 col-md-6 col-12">
                                                 <div class="gridarea__wraper">
                                                     <div class="gridarea__img">
-                                                        <img loading="lazy"  src="{{ asset('/') }}website//img/grid/grid_2.png" alt="grid">
+                                                        <img loading="lazy"  src="../img/grid/grid_2.png" alt="grid">
                                                         <div class="gridarea__small__button">
                                                             <div class="grid__badge blue__color">Mechanical</div>
                                                         </div>
@@ -244,7 +227,7 @@
                                                             </ul>
                                                         </div>
                                                         <div class="gridarea__heading">
-                                                            <h3><a href="#">Nidnies course to under stand
+                                                            <h3><a href="../course-details.html">Nidnies course to under stand
                                                                 about softwere</a></h3>
                                                         </div>
                                                         <div class="gridarea__price green__color">
@@ -255,7 +238,7 @@
                                                         <div class="gridarea__bottom">
                                                             <a href="instructor-details.html">
                                                                 <div class="gridarea__small__img">
-                                                                    <img loading="lazy"  src="{{ asset('/') }}website//img/grid/grid_small_2.jpg" alt="grid">
+                                                                    <img loading="lazy"  src="../img/grid/grid_small_2.jpg" alt="grid">
                                                                     <div class="gridarea__small__content">
                                                                         <h6>Rinis Jhon</h6>
                                                                     </div>
@@ -273,10 +256,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                                            <div class="col-xl-4 col-md-6 col-12">
                                                 <div class="gridarea__wraper">
                                                     <div class="gridarea__img">
-                                                        <a href="../course-details.html"><img loading="lazy"  src="{{ asset('/') }}website//img/grid/grid_3.png" alt="grid"></a>
+                                                        <a href="../course-details.html"><img loading="lazy"  src="../img/grid/grid_3.png" alt="grid"></a>
                                                         <div class="gridarea__small__button">
                                                             <div class="grid__badge pink__color">Development</div>
                                                         </div>
@@ -309,7 +292,7 @@
                         
                                                             <a href="instructor-details.html">
                                                                 <div class="gridarea__small__img">
-                                                                    <img loading="lazy"  src="{{ asset('/') }}website//img/grid/grid_small_3.jpg" alt="grid">
+                                                                    <img loading="lazy"  src="../img/grid/grid_small_3.jpg" alt="grid">
                                                                     <div class="gridarea__small__content">
                                                                         <h6>Micle Jhon</h6>
                                                                     </div>
@@ -328,13 +311,13 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
-                                            <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+
+                                            <div class="col-xl-4 col-md-6 col-12">
                                                 <div class="gridarea__wraper">
                                                     <div class="gridarea__img">
-                                                        <a href="../course-details.html"><img loading="lazy"  src="{{ asset('/') }}website//img/grid/grid_6.png" alt="grid"></a>
+                                                        <a href="../course-details.html"><img loading="lazy"  src="../img/grid/grid_3.png" alt="grid"></a>
                                                         <div class="gridarea__small__button">
-                                                            <div class="grid__badge">New</div>
+                                                            <div class="grid__badge pink__color">Development</div>
                                                         </div>
                                                         <div class="gridarea__small__icon">
                                                             <a href="#"><i class="icofont-heart-alt"></i></a>
@@ -365,7 +348,7 @@
                         
                                                             <a href="instructor-details.html">
                                                                 <div class="gridarea__small__img">
-                                                                    <img loading="lazy"  src="{{ asset('/') }}website//img/grid/grid_small_3.jpg" alt="grid">
+                                                                    <img loading="lazy"  src="../img/grid/grid_small_3.jpg" alt="grid">
                                                                     <div class="gridarea__small__content">
                                                                         <h6>Micle Jhon</h6>
                                                                     </div>
@@ -384,18 +367,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-            
-                                    <div class="tab-pane fade" id="projects__two" role="tabpanel" aria-labelledby="projects__two">
-            
-                                        <div class="row">
-                                            <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                                            <div class="col-xl-4 col-md-6 col-12">
                                                 <div class="gridarea__wraper">
                                                     <div class="gridarea__img">
-                                                        <a href="../course-details.html"><img loading="lazy"  src="{{ asset('/') }}website//img/grid/grid_5.png" alt="grid"></a>
+                                                        <a href="../course-details.html"><img loading="lazy"  src="../img/grid/grid_5.png" alt="grid"></a>
                                                         <div class="gridarea__small__button">
-                                                            <div class="grid__badge">Data &amp; Tech</div>
+                                                            <div class="grid__badge orange__color">Data &amp; Tech</div>
                                                         </div>
                                                         <div class="gridarea__small__icon">
                                                             <a href="#"><i class="icofont-heart-alt"></i></a>
@@ -406,19 +383,19 @@
                                                         <div class="gridarea__list">
                                                             <ul>
                                                                 <li>
-                                                                    <i class="icofont-book-alt"></i> 23 Lesson
+                                                                    <i class="icofont-book-alt"></i> 36 Lesson
                                                                 </li>
                                                                 <li>
-                                                                    <i class="icofont-clock-time"></i> 1 hr 30 min
+                                                                    <i class="icofont-clock-time"></i> 3 hr 40 min
                                                                 </li>
                                                             </ul>
                                                         </div>
                                                         <div class="gridarea__heading">
-                                                            <h3><a href="../course-details.html">Foundation course to under stand
-                                                                about softwere</a></h3>
+                                                            <h3><a href="../course-details.html">Data course to under stand
+                                                                about solution</a></h3>
                                                         </div>
                                                         <div class="gridarea__price">
-                                                            $32.00 <del>/ $67.00</del>
+                                                            $40.00 <del>/ $67.00</del>
                                                             <span> <del class="del__2">Free</del></span>
                         
                                                         </div>
@@ -426,9 +403,9 @@
                         
                                                             <a href="instructor-details.html">
                                                                 <div class="gridarea__small__img">
-                                                                    <img loading="lazy"  src="{{ asset('/') }}website//img/grid/grid_small_1.jpg" alt="grid">
+                                                                    <img loading="lazy"  src="../img/grid/grid_small_5.jpg" alt="grid">
                                                                     <div class="gridarea__small__content">
-                                                                        <h6>Micle Jhon</h6>
+                                                                        <h6>Micle Robin</h6>
                                                                     </div>
                                                                 </div>
                                                             </a>
@@ -445,12 +422,13 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                                            
+                                            <div class="col-xl-4 col-md-6 col-12">
                                                 <div class="gridarea__wraper">
                                                     <div class="gridarea__img">
-                                                        <img loading="lazy"  src="{{ asset('/') }}website//img/grid/grid_6.png" alt="grid">
+                                                        <a href="../course-details.html"><img loading="lazy"  src="../img/grid/grid_4.png" alt="grid"></a>
                                                         <div class="gridarea__small__button">
-                                                            <div class="grid__badge blue__color">Mechanical</div>
+                                                            <div class="grid__badge pink__color">Development</div>
                                                         </div>
                                                         <div class="gridarea__small__icon">
                                                             <a href="#"><i class="icofont-heart-alt"></i></a>
@@ -461,79 +439,19 @@
                                                         <div class="gridarea__list">
                                                             <ul>
                                                                 <li>
-                                                                    <i class="icofont-book-alt"></i> 29 Lesson
+                                                                    <i class="icofont-book-alt"></i> 25 Lesson
                                                                 </li>
                                                                 <li>
-                                                                    <i class="icofont-clock-time"></i> 2 hr 10 min
+                                                                    <i class="icofont-clock-time"></i> 1 hr 40 min
                                                                 </li>
                                                             </ul>
                                                         </div>
                                                         <div class="gridarea__heading">
-                                                            <h3><a href="#">Nidnies course to under stand
-                                                                about softwere</a></h3>
-                                                        </div>
-                                                        <div class="gridarea__price green__color">
-                                                            $32.00<del>/$67.00</del>
-                                                            <span>.Free</span>
-                        
-                                                        </div>
-                                                        <div class="gridarea__bottom">
-                                                            <a href="instructor-details.html">
-                                                                <div class="gridarea__small__img">
-                                                                    <img loading="lazy"  src="{{ asset('/') }}website//img/grid/grid_small_2.jpg" alt="grid">
-                                                                    <div class="gridarea__small__content">
-                                                                        <h6>Rinis Jhon</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                            <div class="gridarea__star">
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <span>(44)</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                          
-                                        </div>
-            
-                                    </div>
-            
-                                    <div class="tab-pane fade" id="projects__three" role="tabpanel" aria-labelledby="projects__three">
-                                        <div class="row">
-                                            <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-                                                <div class="gridarea__wraper">
-                                                    <div class="gridarea__img">
-                                                        <a href="../course-details.html"><img loading="lazy"  src="{{ asset('/') }}website//img/grid/grid_1.png" alt="grid"></a>
-                                                        <div class="gridarea__small__button">
-                                                            <div class="grid__badge">Data &amp; Tech</div>
-                                                        </div>
-                                                        <div class="gridarea__small__icon">
-                                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                                        </div>
-                        
-                                                    </div>
-                                                    <div class="gridarea__content">
-                                                        <div class="gridarea__list">
-                                                            <ul>
-                                                                <li>
-                                                                    <i class="icofont-book-alt"></i> 23 Lesson
-                                                                </li>
-                                                                <li>
-                                                                    <i class="icofont-clock-time"></i> 1 hr 30 min
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="gridarea__heading">
-                                                            <h3><a href="../course-details.html">Foundation course to under stand
-                                                                about softwere</a></h3>
+                                                            <h3><a href="../course-details.html">Minws course to under stand
+                                                                about solution</a></h3>
                                                         </div>
                                                         <div class="gridarea__price">
-                                                            $32.00 <del>/ $67.00</del>
+                                                            $40.00 <del>/ $67.00</del>
                                                             <span> <del class="del__2">Free</del></span>
                         
                                                         </div>
@@ -541,7 +459,7 @@
                         
                                                             <a href="instructor-details.html">
                                                                 <div class="gridarea__small__img">
-                                                                    <img loading="lazy"  src="{{ asset('/') }}website//img/grid/grid_small_1.jpg" alt="grid">
+                                                                    <img loading="lazy"  src="../img/grid/grid_small_3.jpg" alt="grid">
                                                                     <div class="gridarea__small__content">
                                                                         <h6>Micle Jhon</h6>
                                                                     </div>
@@ -560,76 +478,15 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-                                                <div class="gridarea__wraper">
-                                                    <div class="gridarea__img">
-                                                        <img loading="lazy"  src="{{ asset('/') }}website//img/grid/grid_2.png" alt="grid">
-                                                        <div class="gridarea__small__button">
-                                                            <div class="grid__badge blue__color">Mechanical</div>
-                                                        </div>
-                                                        <div class="gridarea__small__icon">
-                                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                                        </div>
-                        
-                                                    </div>
-                                                    <div class="gridarea__content">
-                                                        <div class="gridarea__list">
-                                                            <ul>
-                                                                <li>
-                                                                    <i class="icofont-book-alt"></i> 29 Lesson
-                                                                </li>
-                                                                <li>
-                                                                    <i class="icofont-clock-time"></i> 2 hr 10 min
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="gridarea__heading">
-                                                            <h3><a href="#">Nidnies course to under stand
-                                                                about softwere</a></h3>
-                                                        </div>
-                                                        <div class="gridarea__price green__color">
-                                                            $32.00<del>/$67.00</del>
-                                                            <span>.Free</span>
-                        
-                                                        </div>
-                                                        <div class="gridarea__bottom">
-                                                            <a href="instructor-details.html">
-                                                                <div class="gridarea__small__img">
-                                                                    <img loading="lazy"  src="{{ asset('/') }}website//img/grid/grid_small_2.jpg" alt="grid">
-                                                                    <div class="gridarea__small__content">
-                                                                        <h6>Rinis Jhon</h6>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                            <div class="gridarea__star">
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <i class="icofont-star"></i>
-                                                                <span>(44)</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                       
-                                        </div>
-                                    </div>
-            
                                 
-            
-            
             
                                 </div>
 
-
-
-
                             </div>
-                        </div>
-                    
                     </div>
+
+
+                    
 
                   
                 </div>

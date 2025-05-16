@@ -338,13 +338,13 @@
                         </div>
                         <div class="blogarea__text__wraper__2">
                             <div class="blogarea__heading__2">
-                                <h3><a href="{{  route('blog-detail') }}">Delivering What Consumers Really Value?</a></h3>
+                                <h3><a href="{{  route('blog-detail') }}">Python Explained: Why It’s the Best Language to Start and Grow With</a></h3>
                             </div>
                             <div class="blogarea__list__2">
                                 <ul>
                                     <li>
                                         <a href="{{  route('blog-detail') }}">
-                                            <i class="icofont-business-man-alt-2"></i> Mirnsdo.H
+                                            <i class="icofont-business-man-alt-2"></i> Jahidul Islam
                                         </a>
                                     </li>
                                     <li>
@@ -362,7 +362,9 @@
                                 </ul>
                             </div>
                             <div class="blogarea__paragraph">
-                                <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of On the other hand, organizations have the need for integrating in IT departments</p>
+                                <p>Python isn’t just a programming language—it’s a gateway to modern tech careers, from web development to AI. In this blog, we’ll explore what makes Python so popular, where it’s used, and how you can start mastering it today—even if you’ve never written a single line of code.
+
+</p>
                             </div>
                             <div class="blogarea__button__2">
                                 <a href="{{  route('blog-detail') }}">READ MORE
@@ -557,39 +559,67 @@
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                     <div class="blogsidebar__content__wraper__2" data-aos="fade-up">
-                        <div class="blogsidebar__content__inner__2">
-                            <div class="blogsidebar__img__2">
-                                <img loading="lazy"  src="{{ asset('/') }}website/img/blog/blog_10.png" alt="blog">
-                            </div>
-                            <div class="blogsidebar__name__2">
-                                <h5>
-                                    <a href="#"> Rosalina D. Willaim</a>
+                        <div class="blogsidebar__content__wraper__2" data-aos="fade-up">
+                    <div class="blogsidebar__content__inner__2">
+                        <div class="blogsidebar__img__2">
 
-                                </h5>
-                                <p>Blogger/Photographer</p>
-                            </div>
-                            <div class="blog__sidebar__text__2">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Veritatis distinctio suscipit reprehenderit atque</p>
-                            </div>
-                            <div class="blogsidbar__icon__2">
-                                <ul>
-                                    <li>
-                                        <a href="#"><i class="icofont-facebook"></i></a>
-                                    </li>
 
-                                    <li>
-                                        <a href="#"><i class="icofont-youtube-play"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="icofont-instagram"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="icofont-twitter"></i></a>
-                                    </li>
-                                </ul>
+                            {{-- get from db --}}
+                                        @if(Auth::check())
+                                            @if(Auth::user()->avatar)
+                                                <img src="{{ Auth::user()->avatar }}" loading="lazy" alt="Avatar">
+                                            @else
+                                                @if(Auth::user()->role === 'student')
+                                                    <img src="{{ asset('website/img/student/default_student.png') }}" loading="lazy" alt="Default Student Avatar">
+                                                @elseif(Auth::user()->role === 'instructor')
+                                                    <img src="{{ asset('website/img/instructor/default_instructor.png') }}" loading="lazy" alt="Default Instructor Avatar">
+                                                @else
+                                                    <img src="{{ asset('website/img/teacher/teacher__2.png') }}" loading="lazy" alt="Default Avatar">
+                                                @endif
+                                            @endif
+                                        @else
+                                            <img src="{{ asset('website/img/teacher/teacher__2.png') }}" loading="lazy" alt="Guest Avatar">
+                                        @endif
 
-                            </div>
+
+
+
+
+
+
+
+                            <!-- <img loading="lazy"  src="{{ asset('/') }}website/img/blog/blog_10.png" alt="blog">     -->
                         </div>
+                        <div class="blogsidebar__name__2">
+                            <h5>
+                                <a href="#"> Jahidul Islam</a>
+
+                            </h5>
+                            <p>Instructor</p>
+                        </div>
+                        <div class="blog__sidebar__text__2">
+                            <p>Passionate about coding and AI, Jahidul Islam shares insights on Python and modern tech through hands-on learning and projects.</p>
+                        </div>
+                        <div class="blogsidbar__icon__2">
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="icofont-facebook"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="#"><i class="icofont-youtube-play"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="icofont-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="icofont-twitter"></i></a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
                     </div>
                     <div class="blogsidebar__content__wraper__2" data-aos="fade-up">
 
