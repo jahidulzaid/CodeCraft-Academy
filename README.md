@@ -1,67 +1,222 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# CodeCraft Academy
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+CodeCraft Academy is a Laravel 12 learning platform with role-based dashboards, custom authentication, dynamic homepage content, and student learning workflows (enrollment, progress tracking, reviews, quizzes, assignments).
 
-## About Laravel
+## Stack
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- PHP 8.2+
+- Laravel 12
+- Jetstream + Fortify + Sanctum
+- Livewire 3
+- MySQL
+- Vite + Tailwind CSS
+- Pest/PHPUnit for tests
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Current Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Public Website
 
-## Learning Laravel
+- Dynamic homepage sections:
+  - Hero content from database
+  - Featured courses
+  - Testimonials
+  - Pricing plans
+  - FAQ
+- Course listing and course details pages
+- Blog listing and details
+- About and Contact pages
+- Ask AI route forwards to: https://agent-chat-bot.vercel.app/
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Authentication and Access
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Custom sign-in page at /signin
+- Login supports email or username
+- Google social login with role-aware onboarding (student/instructor)
+- Role middleware guard for:
+  - student
+  - instructor
+  - admin
+- Dashboard redirect based on role
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Student Backend
 
-## Laravel Sponsors
+Implemented backend actions for students:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Enroll in courses
+- Track lesson progress and auto-complete course at 100%
+- Submit and update reviews
+- Submit assignments
+- Update profile and password
+- View quiz attempts, assignments, enrollments, and dashboard stats
 
-### Premium Partners
+### Seeded Platform Content
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Seeding creates sample:
 
-## Contributing
+- Categories, courses, modules, lessons
+- Enrollments and lesson progress
+- Student reviews and quiz attempts
+- Assignments and submissions
+- Blog post
+- Homepage hero section
+- FAQ items
+- Testimonial
+- Pricing plan
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Local Setup
 
-## Code of Conduct
+1. Install dependencies:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+composer install
+npm install
+```
 
-## Security Vulnerabilities
+2. Create environment file:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+copy .env.example .env
+```
+
+3. Configure database in .env (defaults expected by this project):
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=codecraft_academy
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+4. Generate app key and run database:
+
+```bash
+php artisan key:generate
+php artisan migrate:fresh --seed
+```
+
+5. Run app and assets:
+
+```bash
+php artisan serve --host=127.0.0.1 --port=8000
+npm run dev
+```
+
+Alternative (single command dev stack):
+
+```bash
+composer run dev
+```
+
+## Demo Accounts
+
+After seeding, you can use password: password
+
+- Admin: admin@codecraft.test
+- Instructor: instructor@codecraft.test
+- Student: student@codecraft.test
+- Extra seeded student: test@example.com
+
+## Important Routes
+
+### Public
+
+- / -> homepage
+- /course-list
+- /course-details
+- /blog
+- /shop
+- /about
+- /contact
+- /ask-ai -> external redirect
+
+### Auth
+
+- GET /signin
+- POST /signin/custom
+- POST /register
+- GET /auth/google
+- GET /auth/google/callback
+
+### Student (auth + role:student)
+
+- /student-dashboard
+- /student-profile
+- /student-enrolled-courses
+- /student-reviews
+- /student-my-quiz-attempts
+- /student-assignments
+- /student-settings
+- POST /student-enrollments
+- POST /student-enrollments/{enrollment}/progress
+- POST /student-reviews
+- DELETE /student-reviews/{review}
+- POST /student-assignments/{assignment}/submit
+- PUT /student-settings/profile
+- PUT /student-settings/password
+
+## Testing
+
+Run all tests:
+
+```bash
+php artisan test
+```
+
+Run focused backend tests:
+
+```bash
+php artisan test --filter="StudentBackendTest|CourseAccessTest|UserLoginTest"
+```
+
+## Environment Variables
+
+In addition to standard Laravel variables, this project includes optional keys:
+
+- GOOGLE_CLIENT_ID
+- GOOGLE_CLIENT_SECRET
+- GOOGLE_REDIRECT_URI
+- FIREBASE_PROJECT_ID
+- FIREBASE_WEB_API_KEY
+- FIREBASE_AUTH_DOMAIN
+- FIREBASE_APP_ID
+- FIREBASE_STORAGE_BUCKET
+- FIREBASE_MESSAGING_SENDER_ID
+- FIREBASE_SERVICE_ACCOUNT_PATH
+- JUDGE0_API_KEY
+- OLLAMA_BASE_URL
+
+## Auth Notes
+
+- Fortify email verification is currently disabled.
+- Jetstream/Fortify two-factor authentication is currently disabled.
+- The project currently uses role-based post-login redirects and a custom signin UX.
+
+## Troubleshooting
+
+If php artisan serve exits with code 1:
+
+1. Ensure APP_KEY is set:
+
+```bash
+php artisan key:generate
+```
+
+2. Verify database exists and credentials are correct in .env.
+
+3. Clear caches:
+
+```bash
+php artisan optimize:clear
+```
+
+4. Try another port:
+
+```bash
+php artisan serve --host=127.0.0.1 --port=8080
+```
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# Interactive-Learning-Platform
+This project uses the MIT license.
