@@ -64,38 +64,57 @@
 
                     <div class="tab-content tab__content__wrapper" id="myTabContent" data-aos="fade-up">
 
+                        @if ($errors->any())
+                            <div class="col-xl-8 col-md-8 offset-md-2 mb-4">
+                                <div class="alert alert-danger">
+                                    <ul class="mb-0">
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                        @endif
+
+                        @if (session('status'))
+                            <div class="col-xl-8 col-md-8 offset-md-2 mb-4">
+                                <div class="alert alert-success mb-0">{{ session('status') }}</div>
+                            </div>
+                        @endif
+
                         <div class="tab-pane fade active show" id="projects__one" role="tabpanel" aria-labelledby="projects__one">
                             <div class="col-xl-8 col-md-8 offset-md-2">
                                 <div class="loginarea__wraper">
                                     <div class="login__heading">
                                         <h5 class="login__title">Login</h5>
-                                        <p class="login__description">Don't have an account yet? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Sign up for free</a></p>
+                                        <p class="login__description">Don't have an account yet? Use the sign up tab.</p>
                                     </div>
 
 
 
-                                    <form action="#">
+                                    <form action="{{ route('signin.custom') }}" method="POST">
+                                        @csrf
                                         <div class="login__form">
                                             <label class="form__label">Username or email</label>
-                                            <input class="common__login__input" type="text" placeholder="Your username or email">
+                                            <input class="common__login__input" name="email" type="text" placeholder="Your username or email" value="{{ old('email') }}" required>
 
                                         </div>
                                         <div class="login__form">
                                             <label class="form__label">Password</label>
-                                            <input class="common__login__input" type="password" placeholder="Password">
+                                            <input class="common__login__input" name="password" type="password" placeholder="Password" required>
 
                                         </div>
                                         <div class="login__form d-flex justify-content-between flex-wrap gap-2">
                                             <div class="form__check">
-                                                <input id="forgot" type="checkbox">
-                                                <label for="forgot"> Remember me</label>
+                                                <input id="remember" name="remember" type="checkbox" value="1" {{ old('remember') ? 'checked' : '' }}>
+                                                <label for="remember"> Remember me</label>
                                             </div>
                                             <div class="text-end login__form__link">
-                                                <a href="#">Forgot your password?</a>
+                                                <a href="{{ route('password.request') }}">Forgot your password?</a>
                                             </div>
                                         </div>
                                         <div class="login__button">
-                                            <a class="default__button" href="#">Log In</a>
+                                            <button class="default__button" type="submit">Log In</button>
                                         </div>
                                     </form>
 
@@ -126,8 +145,8 @@
                             <div class="col-xl-8 offset-md-2">
                                 <div class="loginarea__wraper">
                                     <div class="login__heading">
-                                        <h5 class="login__title">Sing Up</h5>
-                                        <p class="login__description">Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Log In</a></p>
+                                        <h5 class="login__title">Sign Up</h5>
+                                        <p class="login__description">Already have an account? Use the login tab.</p>
                                     </div>
 
 
@@ -138,42 +157,52 @@
                                             <div class="col-xl-6">
                                                 <div class="login__form">
                                                     <label class="form__label">First Name</label>
-                                                    <input class="common__login__input" name="first_name" type="text" placeholder="First Name">
+                                                    <input class="common__login__input" name="first_name" type="text" placeholder="First Name" value="{{ old('first_name') }}" required>
 
                                                 </div>
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="login__form">
                                                     <label class="form__label">Last Name</label>
-                                                    <input class="common__login__input" name="last_name" type="text" placeholder="Last Name">
+                                                    <input class="common__login__input" name="last_name" type="text" placeholder="Last Name" value="{{ old('last_name') }}" required>
 
                                                 </div>
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="login__form">
                                                     <label class="form__label">Username</label>
-                                                    <input class="common__login__input" name="username" type="text" placeholder="Username">
+                                                    <input class="common__login__input" name="username" type="text" placeholder="Username" value="{{ old('username') }}" required>
 
                                                 </div>
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="login__form">
                                                     <label class="form__label">Email</label>
-                                                    <input class="common__login__input" name="email" type="email" placeholder="Your Email">
+                                                    <input class="common__login__input" name="email" type="email" placeholder="Your Email" value="{{ old('email') }}" required>
 
                                                 </div>
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="login__form">
+                                                    <label class="form__label">I want to join as</label>
+                                                    <select class="common__login__input" name="role" required>
+                                                        <option value="">Select role</option>
+                                                        <option value="student" {{ old('role') === 'student' ? 'selected' : '' }}>Student</option>
+                                                        <option value="instructor" {{ old('role') === 'instructor' ? 'selected' : '' }}>Instructor</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="login__form">
                                                     <label class="form__label">Password</label>
-                                                    <input class="common__login__input" name="password" type="password" placeholder="Password">
+                                                    <input class="common__login__input" name="password" type="password" placeholder="Password" required>
 
                                                 </div>
                                             </div>
                                             <div class="col-xl-6">
                                                 <div class="login__form">
                                                     <label class="form__label">Re-Enter Password</label>
-                                                    <input class="common__login__input" name="password_confirmation" type="password" placeholder="Re-Enter Password">
+                                                    <input class="common__login__input" name="password_confirmation" type="password" placeholder="Re-Enter Password" required>
 
                                                 </div>
                                             </div>
@@ -188,8 +217,7 @@
 
                                         </div> --}}
                                         <div class="login__button">
-                                            
-                                            <a href="#" class="default__button" onclick="document.getElementById('reg-form').submit();">Submit</a>
+                                            <button class="default__button" type="submit">Create Account</button>
                                         </div>
                                     </form>
                                 </div>

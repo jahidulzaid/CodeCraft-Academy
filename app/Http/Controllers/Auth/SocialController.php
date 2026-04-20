@@ -1,116 +1,83 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-use Request;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
-use Laravel\Socialite\Facades\Socialite;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str; 
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Laravel\Socialite\Facades\Socialite;
+use Throwable;
 
 class SocialController extends Controller
 {
-
     public function redirectToGoogle(Request $request)
     {
-        $role = request()->query('role');
+        $role = $request->query('role');
 
-
-        // Validate role before proceeding
-        if (!in_array($role, ['student', 'instructor'])) {
+        if (! in_array($role, ['student', 'instructor'], true)) {
             abort(403, 'Invalid role specified.');
         }
 
-        // Store role in session securely
-        session(['google_login_role' => $role]);
+        $request->session()->put('google_login_role', $role);
 
         return Socialite::driver('google')->redirect();
     }
+
     public function handleGoogleCallback()
     {
-        $googleUser = Socialite::driver('google')->stateless()->user();
-
-        // Get role from session
-        $role = session('google_login_role');
-
-        if (!in_array($role, ['student', 'instructor'])) {
-            abort(403, 'Login role not found in session.');
+        try {
+            $googleUser = Socialite::driver('google')->user();
+        } catch (Throwable $exception) {
+            return redirect()->route('signin')->with('error', 'Google sign-in failed. Please try again.');
         }
 
-        // Check if user exists
-        $user = User::where('email', $googleUser->getEmail())->first();
+        $email = $googleUser->getEmail();
 
-        if (!$user) {
-            // Create user with correct role
+        if (! $email) {
+            return redirect()->route('signin')->with('error', 'Google account email is required.');
+        }
+
+        $requestedRole = session()->pull('google_login_role');
+
+        if (! in_array($requestedRole, ['student', 'instructor'], true)) {
+            $requestedRole = 'student';
+        }
+
+        $user = User::where('email', $email)->first();
+
+        if (! $user) {
             $user = User::create([
                 'name' => $googleUser->getName() ?? 'No Name',
-                'email' => $googleUser->getEmail(),
+                'email' => $email,
                 'google_id' => $googleUser->getId(),
                 'avatar' => $googleUser->getAvatar(),
-                'role' => $role,
+                'role' => $requestedRole,
                 'password' => bcrypt(Str::random(16)),
+                'email_verified_at' => now(),
             ]);
         } else {
-            // Optional: Update role if changed
-            if ($user->role !== $role) {
-                $user->role = $role;
-                $user->save();
+            $updates = [
+                'google_id' => $googleUser->getId(),
+                'avatar' => $googleUser->getAvatar(),
+            ];
+
+            if (empty($user->role)) {
+                $updates['role'] = $requestedRole;
             }
+
+            $user->fill($updates)->save();
         }
 
-        Auth::login($user);
+        Auth::login($user, true);
+        request()->session()->regenerate();
 
-        // Redirect based on role
         return match ($user->role) {
             'student' => redirect()->route('student.dashboard'),
             'instructor' => redirect()->route('instructor.dashboard'),
-            default => abort(403, 'Unknown role.'),
+            'admin' => redirect()->route('admin.dashboard'),
+            default => redirect()->route('dashboard'),
         };
     }
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-// class SocialController extends Controller
-// {
-//     public function redirectToGoogle()
-//     {
-//         return Socialite::driver('google')->redirect();
-//     }
-
-//     public function handleGoogleCallback()
-//     {
-//         $googleUser = Socialite::driver('google')->stateless()->user();
-
-//        $user = User::updateOrCreate(
-//     [
-//         'email' => $googleUser->getEmail(),
-//     ],
-//     [
-//         'name' => $googleUser->getName() ?? 'No Name',
-//         'google_id' => $googleUser->getId(),
-//         'avatar' => $googleUser->getAvatar(),
-//         'access_token' => $googleUser->token,
-//         'refresh_token' => $token['refresh_token'] ?? null,
-//         'password' => Hash::make(Str::random(24)), // use random pass when with google
-//     ]
-// );
-
-//         Auth::login($user);
-
-//         return redirect()->intended('/student-dashboard');
-//     }
-// }

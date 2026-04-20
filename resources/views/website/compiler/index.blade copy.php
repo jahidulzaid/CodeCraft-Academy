@@ -91,7 +91,7 @@
 
                                 </li>
 
-                                <li><a class="headerarea__has__dropdown" href="{{ url('http://localhost:8501/') }}">Ask AI</a>
+                                <li><a class="headerarea__has__dropdown" href="{{ route('ai.view') }}">Ask AI</a>
                                 </li>
 
                             </ul>

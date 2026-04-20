@@ -8,39 +8,43 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    function index(){
+    public function index()
+    {
+        if (Auth::check()) {
+            return redirect()->route('dashboard');
+        }
+
         return view('website.login-registration.index');
     }
-    public function signin(Request $request)
-{
-    // Validate user credentials
-    $request->validate([
-        'email' => 'required|email',
-        'password' => 'required',
-    ]);
 
-    // Try to login
-    if (Auth::attempt($request->only('email', 'password'))) {
-        // Login success
+    public function signin(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'string', 'max:255'],
+            'password' => ['required', 'string'],
+            'remember' => ['nullable', 'boolean'],
+        ]);
+
+        $login = trim($credentials['email']);
+        $loginField = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+        $remember = (bool) ($credentials['remember'] ?? false);
+
+        if (! Auth::attempt([$loginField => $login, 'password' => $credentials['password']], $remember)) {
+            return back()
+                ->withErrors(['email' => 'The provided credentials are incorrect.'])
+                ->onlyInput('email', 'remember');
+        }
+
+        $request->session()->regenerate();
         $user = Auth::user();
 
-        // Redirect based on role
-        switch ($user->role) {
-            case 'student':
-                return redirect()->intended('/student-dashboard')->with('success', 'Logged in successfully!');
-            case 'instructor':
-                return redirect()->intended('/instructor-dashboard')->with('success', 'Logged in successfully!');
-            case 'admin':
-                return redirect()->intended('/admin-dashboard')->with('success', 'Logged in successfully!');
-            default:
-                Auth::logout();
-                return redirect()->route('signin')->with('error', 'Unauthorized role.');
-        }
+        return match ($user->role) {
+            'student' => redirect()->intended(route('student.dashboard')),
+            'instructor' => redirect()->intended(route('instructor.dashboard')),
+            'admin' => redirect()->intended(route('admin.dashboard')),
+            default => redirect()->intended(route('dashboard')),
+        };
     }
-
-    // Login failed
-    return redirect()->back()->with('error', 'Invalid credentials!');
-}
 
 
 }

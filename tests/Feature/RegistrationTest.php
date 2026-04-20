@@ -1,20 +1,31 @@
 <?php
 
-use Laravel\Fortify\Features;
-use Laravel\Jetstream\Jetstream;
+use App\Models\User;
 
 test('registration screen can be rendered', function () {
     $response = $this->get('/register');
 
     $response->assertStatus(200);
-})->skip(function () {
-    return ! Features::enabled(Features::registration());
-}, 'Registration support is not enabled.');
+});
 
 test('new users can register', function () {
-    $response = $this->get('/register');
+    $response = $this->post('/register', [
+        'first_name' => 'Jane',
+        'last_name' => 'Doe',
+        'username' => 'janedoe',
+        'email' => 'jane@example.com',
+        'password' => 'password123',
+        'password_confirmation' => 'password123',
+        'role' => 'student',
+    ]);
 
-    $response->assertStatus(404);
-})->skip(function () {
-    return Features::enabled(Features::registration());
-}, 'Registration support is enabled.');
+    $response->assertRedirect(route('student.dashboard'));
+    $this->assertAuthenticated();
+
+    $this->assertDatabaseHas('users', [
+        'email' => 'jane@example.com',
+        'role' => 'student',
+    ]);
+
+    expect(User::where('email', 'jane@example.com')->exists())->toBeTrue();
+});

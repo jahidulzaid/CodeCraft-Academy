@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -25,28 +24,22 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    // protected $fillable = [
-    //     'name',
-    //     'email',
-    //     'password',
-    // ];
-
-    // protected $fillable = [
-    //     'first_name',
-    //     'last_name',
-    //     'username',
-    //     'email',
-    //     'password',
-    //     'avatar',
-    // ];
     protected $fillable = [
         'name',
         'first_name',
         'last_name',
         'username',
         'email',
+        'phone',
+        'occupation',
+        'bio',
         'password',
         'avatar',
+        'google_id',
+        'role',
+        'access_token',
+        'refresh_token',
+        'email_verified_at',
     ];
     
 
@@ -82,7 +75,35 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
-    }    
+    }
 
-    
+    public function taughtCourses()
+    {
+        return $this->hasMany(Course::class, 'instructor_id');
+    }
+
+    public function enrollments()
+    {
+        return $this->hasMany(Enrollment::class);
+    }
+
+    public function authoredPosts()
+    {
+        return $this->hasMany(BlogPost::class);
+    }
+
+    public function studentReviews()
+    {
+        return $this->hasMany(StudentReview::class);
+    }
+
+    public function quizAttempts()
+    {
+        return $this->hasMany(QuizAttempt::class);
+    }
+
+    public function assignmentSubmissions()
+    {
+        return $this->hasMany(AssignmentSubmission::class);
+    }
 }

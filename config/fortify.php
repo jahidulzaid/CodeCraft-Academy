@@ -149,11 +149,14 @@ return [
         // Features::emailVerification(),
         Features::updateProfileInformation(),
         Features::updatePasswords(),
-        Features::twoFactorAuthentication([
-            'confirm' => true,
-            'confirmPassword' => true,
-            // 'window' => 0,
-        ]),
+        // Disabled for now because this project uses a custom login UX and
+        // users expect email/SMS OTP; Jetstream 2FA requires authenticator apps.
+        // Re-enable after implementing a dedicated OTP flow.
+        // Features::twoFactorAuthentication([
+        //     'confirm' => true,
+        //     'confirmPassword' => true,
+        //     // 'window' => 0,
+        // ]),
     ],
 
 ];
